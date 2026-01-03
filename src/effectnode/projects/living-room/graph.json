@@ -63,8 +63,8 @@
 			"title": "light",
 			"metaData": {
 				"baseColor": "#8cff2e",
-				"intensity": "383",
-				"lightColor": "#ffd0a3",
+				"intensity": "346.6",
+				"lightColor": "#ffc894",
 				"move": false,
 				"light1": [
 					0.9993393322328581,
@@ -153,7 +153,7 @@
 					1,
 					0,
 					-14.17018454418859,
-					-0.43060828219634817,
+					-1.400389535648139,
 					-19.854800991712047,
 					1
 				],
@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#00ff8c",
+				"baseColor": "#0d58ff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#00ff8c",
+				"baseColor": "#0d58ff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
