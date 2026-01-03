@@ -1,13 +1,12 @@
-import { Center, Environment, Html, MeshTransmissionMaterial, PerspectiveCamera, RoundedBox, Sphere } from "@react-three/drei";
+import { Center, Environment, MeshTransmissionMaterial, OrbitControls, PerspectiveCamera, RoundedBox } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect } from "react";
 import { EnergyWaveCompo } from "./shared/EnergyWave/EnergyWaveCompo";
 
 export function ToolBox({ useNodeMemory }) {
   return <>
     <div className="w-full h-full">
       <Canvas>
-
         <MyMesh useNodeMemory={useNodeMemory}></MyMesh>
 
         <PerspectiveCamera position={[0, 0, 3.5]} makeDefault></PerspectiveCamera>
@@ -15,6 +14,8 @@ export function ToolBox({ useNodeMemory }) {
         <Suspense fallback={null}>
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
         </Suspense>
+
+        <OrbitControls></OrbitControls>
       </Canvas>
     </div>
   </>;
