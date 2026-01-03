@@ -440,6 +440,9 @@ export class EditorCore {
       ///////
 
       ///////
+
+      //
+
       // {
       //   let win = wins.find((r) => r.type === "files");
 
@@ -457,7 +460,13 @@ export class EditorCore {
       //   });
       // }
 
+      //
+
       ///////
+
+      //
+      //
+      //
     };
 
     this.upWindow = ({ win }) => {
