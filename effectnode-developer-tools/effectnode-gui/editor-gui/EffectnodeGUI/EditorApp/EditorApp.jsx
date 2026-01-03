@@ -30,43 +30,43 @@ export function EditorApp({ useStore }) {
   //   };
   // }, []);
 
-  let rename = () => {
-    let newTitle = window.prompt("Rename Workspace title", spaceID);
-    if (newTitle) {
-      useDeveloper
-        .getState()
-        .rename({
-          oldTitle: spaceID,
-          title: newTitle,
-        })
-        .catch((r) => {
-          alert("name taken");
-          return Promise.reject("name taken");
-        })
-        .then(() => {
-          location.assign(`/dev/projects/${newTitle}`);
-        });
-    }
-  };
+  // let rename = () => {
+  //   let newTitle = window.prompt("Rename Workspace title", spaceID);
+  //   if (newTitle) {
+  //     useDeveloper
+  //       .getState()
+  //       .rename({
+  //         oldTitle: spaceID,
+  //         title: newTitle,
+  //       })
+  //       .catch((r) => {
+  //         alert("name taken");
+  //         return Promise.reject("name taken");
+  //       })
+  //       .then(() => {
+  //         location.assign(`/dev/projects/${newTitle}`);
+  //       });
+  //   }
+  // };
 
-  let clone = () => {
-    let newTitle = window.prompt("Clone Workspace new name", spaceID);
-    if (newTitle) {
-      useDeveloper
-        .getState()
-        .clone({
-          oldTitle: spaceID,
-          title: `${newTitle}`,
-        })
-        .catch((r) => {
-          alert("name taken");
-          return Promise.reject("name taken");
-        })
-        .then(() => {
-          location.assign(`/dev/projects/${newTitle}`);
-        });
-    }
-  };
+  // let clone = () => {
+  //   let newTitle = window.prompt("Clone Workspace new name", spaceID);
+  //   if (newTitle) {
+  //     useDeveloper
+  //       .getState()
+  //       .clone({
+  //         oldTitle: spaceID,
+  //         title: `${newTitle}`,
+  //       })
+  //       .catch((r) => {
+  //         alert("name taken");
+  //         return Promise.reject("name taken");
+  //       })
+  //       .then(() => {
+  //         location.assign(`/dev/projects/${newTitle}`);
+  //       });
+  //   }
+  // };
 
   return (
     <div className="w-full h-full">
