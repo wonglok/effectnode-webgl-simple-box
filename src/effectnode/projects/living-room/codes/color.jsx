@@ -1,13 +1,20 @@
 import { Html } from "@react-three/drei";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { HexColorPicker } from "react-colorful";
 
 export function ToolBox({ useStore, useNodeMemory }) {
+  let baseColor = useNodeMemory((r) => r.baseColor);
+
+
   return <>
     {/*  */}
-
-    {/*  */}
-
-    {/*  */}
+    <div className="p-5">
+      <HexColorPicker color={baseColor} onChange={(change) => {
+        useNodeMemory.setState({
+          baseColor: change
+        })
+      }} />
+    </div>
   </>;
 }
 
@@ -22,7 +29,7 @@ export function Runtime({ useNodeMemory, io }) {
 
 export function NodeBox({ useNodeMemory }) {
   return (
-    <Html position={[0, 0, -1]} center className="bg-white">
+    <Html position={[0, 0, -1.]} center className="bg-white">
       <InputColor useNodeMemory={useNodeMemory}></InputColor>
     </Html>
   );
@@ -32,14 +39,16 @@ function InputColor({ useNodeMemory }) {
   const baseColor = useNodeMemory((r) => r.baseColor);
 
   return (
-    <input
-      type="color"
-      value={baseColor}
-      onChange={(va) => {
-        useNodeMemory.setState({
-          baseColor: va.target.value,
-        });
-      }}
-    />
+    <>
+      <input
+        type="color"
+        value={baseColor}
+        onChange={(va) => {
+          useNodeMemory.setState({
+            baseColor: va.target.value,
+          });
+        }}
+      />
+    </>
   );
 }
