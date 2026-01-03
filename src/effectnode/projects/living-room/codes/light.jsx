@@ -22,7 +22,7 @@ export function ToolBox({ io, files, isEditing, useNodeMemory }) {
       <Content isEditing={true} useNodeMemory={useNodeMemory}></Content>
       <Suspense fallback={null}>
         <RoomContent files={files}></RoomContent>
-        <Environment environmentIntensity={0.0} files={[`/hdr/default.hdr`]}></Environment>
+        {/* <Environment environmentIntensity={0.0} files={[`/hdr/default.hdr`]}></Environment> */}
       </Suspense>
     </Canvas>
   </>;
