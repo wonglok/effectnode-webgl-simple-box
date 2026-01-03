@@ -372,8 +372,6 @@ export class EditorCore {
 
       ///////
 
-
-
       ///////
       {
         let win = wins.find((r) => r.type === "previewer");
