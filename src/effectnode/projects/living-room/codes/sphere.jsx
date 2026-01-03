@@ -1,15 +1,16 @@
-import { Environment, Html, MeshTransmissionMaterial, Sphere } from "@react-three/drei";
+import { Environment, Html, MeshTransmissionMaterial, PerspectiveCamera, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 
-export function ToolBox({ useStore, useNodeMemory }) {
-  let baseColor = useNodeMemory((r) => r.baseColor);
+export function ToolBox({ useNodeMemory }) {
   return <>
     <div className="w-full h-full">
       <Canvas>
-        <Sphere scale={2}>
-          <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} anisotropy={0.1} chromaticAberration={1} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
-        </Sphere>
+
+        <MySphere useNodeMemory={useNodeMemory}></MySphere>
+
+        <PerspectiveCamera position={[0, 0, 3]} makeDefault></PerspectiveCamera>
+
         <Suspense fallback={null}>
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
         </Suspense>
@@ -19,33 +20,38 @@ export function ToolBox({ useStore, useNodeMemory }) {
 }
 
 export function Runtime({ useNodeMemory, io }) {
-  let baseColor = useNodeMemory((r) => r.baseColor);
-
   useEffect(() => {
     io.input(0, (v) => {
       useNodeMemory.setState({
         baseColor: v
       })
     })
-  }, [io, baseColor]);
+  }, [io]);
 
   return <>
-    <Sphere>
-      <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
-    </Sphere>
+    <MySphere useNodeMemory={useNodeMemory}></MySphere>
   </>;
 }
 
 export function NodeBox({ useNodeMemory }) {
-  let baseColor = useNodeMemory((r) => r.baseColor);
 
   return (
     <>
-      <Sphere position={[2.5, 0, 0]}>
-        <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
-      </Sphere>
+      <group position={[2.5, 0, 0]}>
+        <MySphere useNodeMemory={useNodeMemory}></MySphere>
+      </group>
     </>
   );
 }
 
 // 
+
+function MySphere({ useNodeMemory }) {
+  let baseColor = useNodeMemory((r) => r.baseColor);
+
+  return <>
+    <Sphere position={[0, 0, 0]}>
+      <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
+    </Sphere>
+  </>
+}
