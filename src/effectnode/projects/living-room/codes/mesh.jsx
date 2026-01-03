@@ -16,7 +16,9 @@ import { useEffect, } from "react";
 import { clone } from "three/examples/jsm/utils/SkeletonUtils";
 
 export function ToolBox({ projectName }) {
-  return <>{/*  */}</>;
+  return <>
+    {/*  */}
+  </>;
 }
 
 export function Runtime({ io, files, onLoop }) {
@@ -35,12 +37,6 @@ export function Runtime({ io, files, onLoop }) {
 
   return (
     <>
-      {/* <group ref={ref}>
-        <mesh position={[0, 0, 0]}>
-          <boxGeometry></boxGeometry>
-          <meshStandardMaterial color={color}></meshStandardMaterial>
-        </mesh>
-      </group> */}
 
       <group
         onClick={(ev) => {

@@ -1,8 +1,11 @@
 // import md5 from "md5";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { create } from "zustand";
 // import { getID } from "./tools/getID";
 // import { create } from "zustand";
 // import md5 from "md5";
+
+const BoxDataMap = new Map();
 
 export function CodeRun({
   projectName,
@@ -14,7 +17,7 @@ export function CodeRun({
   // onLoop,
   useEditorStore,
   mode,
-  useAutoSaveData,
+  // useAutosaveNodeData,
 }) {
   let graph = useRuntime((r) => r.graph) || {};
   let nodes = graph.nodes;
@@ -26,6 +29,26 @@ export function CodeRun({
   let settings = useRuntime((r) => r.settings);
 
   let setting = settings.find((r) => r.nodeID === nodeID);
+
+
+  let useAutosaveNodeData = useMemo(() => {
+    let make = () => {
+      return create((set, get) => {
+        //
+        return {
+          //
+        };
+        //
+      });
+    };
+
+    if (BoxDataMap.has(projectName + nodeID)) {
+      return BoxDataMap.get(projectName + nodeID);
+    }
+    BoxDataMap.set(projectName + nodeID, make());
+    return BoxDataMap.get(projectName + nodeID);
+  }, [projectName, nodeID]);
+
 
   //
 
@@ -219,22 +242,22 @@ export function CodeRun({
   }, [mode, nodeID, useEditorStore]);
 
   useEffect(() => {
-    useAutoSaveData.setState({ ...extendAPI.boxData });
-  }, [extendAPI, useAutoSaveData]);
+    useAutosaveNodeData.setState({ ...extendAPI.boxData });
+  }, [extendAPI, useAutosaveNodeData]);
 
   useEffect(() => {
     //
 
     let timer = 0;
 
-    return useAutoSaveData.subscribe((now, b4) => {
+    return useAutosaveNodeData.subscribe((now, b4) => {
       for (let each in now) {
         extendAPI.boxData[each] = now[each];
       }
 
       extendAPI.saveBoxData();
     });
-  }, [useAutoSaveData, mode, nodeID, useEditorStore, extendAPI]);
+  }, [useAutosaveNodeData, mode, nodeID, useEditorStore, extendAPI]);
 
   return (
     <>
@@ -250,7 +273,7 @@ export function CodeRun({
           domElement={domElement}
           //
           isEditing={useEditorStore}
-          useAutoSaveData={useAutoSaveData}
+          useAutosaveNodeData={useAutosaveNodeData}
           io={io}
         //
         ></Algorithm>

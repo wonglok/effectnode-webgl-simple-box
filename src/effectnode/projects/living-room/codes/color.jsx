@@ -1,7 +1,7 @@
 import { Html } from "@react-three/drei";
 import { useEffect } from "react";
 
-export function ToolBox({ useStore, useAutoSaveData }) {
+export function ToolBox({ useStore, useAutosaveNodeData }) {
   return <>
     {/*  */}
 
@@ -11,8 +11,8 @@ export function ToolBox({ useStore, useAutoSaveData }) {
   </>;
 }
 
-export function Runtime({ useAutoSaveData, io }) {
-  let baseColor = useAutoSaveData((r) => r.baseColor);
+export function Runtime({ useAutosaveNodeData, io }) {
+  let baseColor = useAutosaveNodeData((r) => r.baseColor);
   useEffect(() => {
     io.output(0, baseColor);
   }, [io, baseColor]);
@@ -20,23 +20,23 @@ export function Runtime({ useAutoSaveData, io }) {
   return <></>;
 }
 
-export function NodeBox({ useAutoSaveData }) {
+export function NodeBox({ useAutosaveNodeData }) {
   return (
     <Html position={[0, 0, -1]} center className="bg-white">
-      <InputColor useAutoSaveData={useAutoSaveData}></InputColor>
+      <InputColor useAutosaveNodeData={useAutosaveNodeData}></InputColor>
     </Html>
   );
 }
 
-function InputColor({ useAutoSaveData }) {
-  const baseColor = useAutoSaveData((r) => r.baseColor);
+function InputColor({ useAutosaveNodeData }) {
+  const baseColor = useAutosaveNodeData((r) => r.baseColor);
 
   return (
     <input
       type="color"
       value={baseColor}
       onChange={(va) => {
-        useAutoSaveData.setState({
+        useAutosaveNodeData.setState({
           baseColor: va.target.value,
         });
       }}

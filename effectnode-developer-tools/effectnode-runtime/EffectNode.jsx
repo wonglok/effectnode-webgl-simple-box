@@ -13,7 +13,6 @@ import { CodeRun } from "./CodeRun";
 import { CoreContext } from "effectnode-developer-tools/effectnode-gui/editor-gui/EffectnodeGUI/EffectNodeStudio";
 
 const RunTimeStoreMap = new Map();
-const BoxDataMap = new Map();
 
 export function EffectNode({
   projectName,
@@ -34,22 +33,6 @@ export function EffectNode({
       useEditorStore = false;
     }
   }
-
-  let useAutoSaveData = useMemo(() => {
-    let make = () => {
-      return create((set, get) => {
-        //
-        return {};
-        //
-      });
-    };
-
-    if (BoxDataMap.has(projectName)) {
-      return BoxDataMap.get(projectName);
-    }
-    BoxDataMap.set(projectName, make());
-    return BoxDataMap.get(projectName);
-  }, [projectName]);
 
   // let [api, setDisplay] = useState({ domElement: false });
 
@@ -243,7 +226,7 @@ export function EffectNode({
 
                 return (
                   <CodeRun
-                    useAutoSaveData={useAutoSaveData}
+                    // useAutosaveNodeData={useAutosaveNodeData}
                     projectName={projectName}
                     mode={"runtime"}
                     key={node?._id + codeImple?._id}
@@ -258,7 +241,7 @@ export function EffectNode({
 
           {mode === "toolbox" && nodeID && (
             <CodeRun
-              useAutoSaveData={useAutoSaveData}
+              // useAutosaveNodeData={useAutosaveNodeData}
               projectName={projectName}
               mode={"toolbox"}
               key={nodeID + codeImple?._id}
@@ -272,7 +255,7 @@ export function EffectNode({
 
           {mode === "node" && nodeID && (
             <CodeRun
-              useAutoSaveData={useAutoSaveData}
+              // useAutosaveNodeData={useAutosaveNodeData}
               projectName={projectName}
               mode={"node"}
               key={nodeID + codeImple?._id}
