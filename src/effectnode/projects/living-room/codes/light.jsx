@@ -17,7 +17,6 @@ export function Runtime({ isEditing, useAutoSaveData, io, files }) {
   //
   return (
     <>
-      {/*  */}
       <MoverGate
         name="light2-plant"
         isEditing={isEditing}

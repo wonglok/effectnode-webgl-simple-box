@@ -82,90 +82,6 @@ export function CodeRun({
     };
   }, [cleanAll]);
 
-  // let ui = useMemo(() => {
-  //   return {
-  //     on: (label, fnc) => {
-  //       onClean(
-  //         useRuntime.subscribe((state) => {
-  //           let settings = state.settings;
-  //           let setting = settings.find((r) => r.nodeID === nodeID);
-  //           let datas = setting.data.filter((r) => r.label === label);
-  //           if (datas.length > 1) {
-  //             console.log("error, duplicated settings name", label);
-  //           }
-  //           [datas[0]]
-  //             .filter((r) => r)
-  //             .forEach((dat) => {
-  //               fnc(dat.value);
-  //             });
-  //         })
-  //       );
-
-  //       useRuntime.setState({
-  //         settings: [...useRuntime.getState().settings],
-  //       });
-  //     },
-  //     useSet: (
-  //       label,
-  //       defaultValue = 0,
-  //       { type = "range", ...config } = { type: "range", min: -1, max: 1 }
-  //     ) => {
-  //       let [value, setValue] = useState(defaultValue);
-
-  //       useEffect(() => {
-  //         // //
-  //         if (!["text", "range", "color", "number"].includes(type)) {
-  //           throw new Error("not supported type: " + type);
-  //         }
-
-  //         let finalType = type;
-  //         if (finalType === "number") {
-  //           finalType = "range";
-  //         }
-
-  //         let useAdapter = useEditorStore || useRuntime;
-
-  //         let tt = setInterval(() => {
-  //           let settings = useAdapter.getState().settings;
-  //           if (settings) {
-  //             clearInterval(tt);
-  //             let setting = settings.find((r) => r.nodeID === nodeID);
-  //             if (setting && !setting.data.some((r) => r.label === label)) {
-  //               let entry = {
-  //                 _id: `${md5(getID())}`,
-  //                 label: `${label}`,
-  //                 type: `${finalType}`,
-  //                 value: defaultValue,
-  //                 ...config,
-  //               };
-  //               setting.data.push(entry);
-
-  //               //
-  //               useAdapter.setState({
-  //                 settings: JSON.parse(
-  //                   JSON.stringify(useAdapter.getState().settings)
-  //                 ),
-  //               });
-  //             }
-
-  //             let data = setting.data.find((r) => r.label === label);
-
-  //             setValue(data.value);
-  //             useAdapter.subscribe(() => {
-  //               let data = setting.data.find((r) => r.label === label);
-  //               setValue(data.value);
-  //             });
-  //           }
-  //         }, 0);
-
-  //         return () => {};
-  //       }, [config, defaultValue, label, type]);
-
-  //       return value;
-  //     },
-  //   };
-  // }, [nodeID, onClean, useEditorStore, useRuntime]);
-
   let [io, setIO] = useState(false);
   useEffect(() => {
     let cleans = [];
@@ -243,52 +159,6 @@ export function CodeRun({
     return () => { };
   }, [domElement, nodeOne, socketMap, useRuntime, edges?.length]);
 
-  // useEditorStore = useMemo(() => {
-  //   return (
-  //     useEditorStore ||
-  //     create(() => {
-  //       return {};
-  //     })
-  //   );
-  // }, [useEditorStore]);
-
-  // useEffect(() => {
-  //   useAutoSaveData.setState(extendAPI.boxData);
-  // }, [extendAPI, useAutoSaveData]);
-
-  // useEffect(() => {
-  //   let tt = 0;
-  //   return useAutoSaveData.subscribe((now, b4) => {
-  //     clearTimeout(tt);
-  //     tt = setTimeout(() => {
-  //       if (mode === "toolbox") {
-  //         extendAPI.saveBoxData();
-  //       }
-  //     }, 100);
-  //   });
-  // }, [extendAPI, mode, useAutoSaveData]);
-
-  //
-  // let setToolboxFullScreen = useCallback(
-  //   (value) => {
-  //     if (mode === "toolbox") {
-  //       let diskSettings = useEditorStore.getState().settings;
-  //       let diskSetting = diskSettings.find((r) => r.nodeID === nodeID);
-
-  //       diskSetting.enableFullScreen = value;
-  //       extendAPI.saveBoxData();
-  //     }
-  //     if (mode === "node") {
-  //       let diskSettings = useEditorStore.getState().settings;
-  //       let diskSetting = diskSettings.find((r) => r.nodeID === nodeID);
-
-  //       diskSetting.enableFullScreen = value;
-  //       extendAPI.saveBoxData();
-  //     }
-  //   },
-  //   [extendAPI, mode, nodeID, useEditorStore]
-  // );
-
   let extendAPI = useMemo(() => {
     let eAPI = {
       get boxData() {
@@ -356,6 +226,7 @@ export function CodeRun({
     //
 
     let timer = 0;
+
     return useAutoSaveData.subscribe((now, b4) => {
       for (let each in now) {
         extendAPI.boxData[each] = now[each];
