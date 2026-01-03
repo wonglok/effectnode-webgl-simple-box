@@ -269,9 +269,6 @@ export function EffectNode({
 
       <Emit projectName={projectName}></Emit>
 
-      {/*  */}
-
-      {/*  */}
     </>
   );
 }
