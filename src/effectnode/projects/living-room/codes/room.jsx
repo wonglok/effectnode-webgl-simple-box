@@ -26,7 +26,6 @@ export function ToolBox({ useNodeMemory, files }) {
 
         <Suspense fallback={null}>
           <Content files={files}></Content>
-
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
         </Suspense>
       </Canvas>
