@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#00ff8c",
+				"baseColor": "#0dff92",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#00ff8c",
+				"baseColor": "#0dff92",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -844,9 +844,9 @@
 				"_id": "_i8sgnof_",
 				"title": "sphere",
 				"position": [
-					0.053113170140941635,
+					0.26216997778613316,
 					0,
-					2.4201374699599985
+					2.5254943998324237
 				],
 				"inputs": [
 					{
