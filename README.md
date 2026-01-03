@@ -1,3 +1,11 @@
+# Effectnode
+
+
+
+https://github.com/user-attachments/assets/e102935b-70d5-4e50-b863-2a9847dc282a
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
