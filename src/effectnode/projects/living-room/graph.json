@@ -62,7 +62,7 @@
 			],
 			"title": "light",
 			"metaData": {
-				"baseColor": "#caff9e",
+				"baseColor": "#8cff2e",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -208,7 +208,7 @@
 			],
 			"title": "mesh",
 			"metaData": {
-				"baseColor": "#caff9e",
+				"baseColor": "#8cff2e",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#caff9e",
+				"baseColor": "#8cff2e",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#caff9e",
+				"baseColor": "#8cff2e",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					-1.284923188302273,
+					-1.4227722955002156,
 					0,
-					-2.4671294543579587
+					-0.19499950812733502
 				],
 				"inputs": [
 					{
@@ -770,9 +770,9 @@
 				"_id": "_3z0d1ci_",
 				"title": "color",
 				"position": [
-					1.9928144322046304,
+					1.8354700275289162,
 					0,
-					-0.5858363979519217
+					0.7833849752183002
 				],
 				"inputs": [
 					{
@@ -844,9 +844,9 @@
 				"_id": "_i8sgnof_",
 				"title": "sphere",
 				"position": [
-					0.6244862442563208,
+					0.9874740919072755,
 					0,
-					2.587120213159148
+					3.512173489042321
 				],
 				"inputs": [
 					{
