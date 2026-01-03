@@ -20,9 +20,7 @@ export function ToolBox({ io, useNodeMemory, files }) {
     <div className="w-full h-full">
       <Canvas>
         <Suspense fallback={null}>
-
           <RoomContent files={files}></RoomContent>
-
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
         </Suspense>
       </Canvas>
