@@ -369,41 +369,20 @@ export class EditorCore {
 
     this.resetWindow = () => {
       let { apps, wins } = this.getState();
-      ///////
 
       ///////
-      {
-        let win = wins.find((r) => r.type === "editor");
-        if (win) {
-          win.top = 10;
-          win.left = 10;
-          win.width = window.innerWidth * 0.5;
-          win.height = (window.innerHeight - 130);
-        }
 
-        this.setState({
-          apps: [...apps],
-          wins: [...wins],
-          overlayPop: "",
-        });
-      }
-      ///////
+
 
       ///////
       {
         let win = wins.find((r) => r.type === "previewer");
-        // if (win) {
-        //   win.width = window.innerWidth * 0.5;
-        //   win.height = (window.innerHeight - 130) / 2 - 15;
-        //   win.top = (window.innerHeight - 130) / 2 + 30;
-        //   win.left = 10;
-        // }
 
         if (win) {
+          win.top = 10;
+          win.left = 10;
           win.width = window.innerWidth * 0.5 - 30;
-          win.height = (window.innerHeight - 130) / 2 - 15;
-          win.top = (window.innerHeight - 130) / 2 + 30;
-          win.left = window.innerWidth * 0.5 + 20;
+          win.height = (window.innerHeight - 130) / 100 * 45 - 50;
         }
 
         this.setState({
@@ -412,6 +391,28 @@ export class EditorCore {
           overlayPop: "",
         });
       }
+
+
+      ///////
+
+      {
+        let win = wins.find((r) => r.type === "editor");
+
+        if (win) {
+          win.top = (window.innerHeight - 130) / 100 * 45;
+          win.left = 10;
+
+          win.width = window.innerWidth * 0.5 - 30;
+          win.height = (window.innerHeight - 130) / 100 * 55;
+        }
+
+        this.setState({
+          apps: [...apps],
+          wins: [...wins],
+          overlayPop: "",
+        });
+      }
+      ///////
 
       ///////
       // {
