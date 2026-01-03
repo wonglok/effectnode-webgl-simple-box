@@ -29,14 +29,22 @@ function CodeInternals({ onAPI = () => { } }) {
 
     let { onClean, cleanAll } = useMemo(() => {
         let cleanTasks = []
+
+        //
+
         let onClean = (fnc) => {
             cleanTasks.push(fnc)
         }
+
+        //
+
         let cleanAll = () => {
             cleanTasks.forEach((r) => {
                 r()
             })
         }
+
+        //
         return {
             onClean,
             cleanAll
