@@ -21,7 +21,6 @@ export function EffectNode({
   nodeID = false,
   useEditorStore = false,
 }) {
-  //
   const core = useContext(CoreContext);
   if (core && core.store && !useEditorStore) {
     useEditorStore = core.store;

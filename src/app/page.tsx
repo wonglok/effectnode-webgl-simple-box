@@ -1,13 +1,18 @@
 "use client";
+
 import { Canvas } from "@react-three/fiber";
 import { EffectNode } from "effectnode-developer-tools/effectnode-runtime/EffectNode";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <div className="w-full h-full relative">
       <Canvas>
-        <EffectNode projectName="living-room"></EffectNode>
+        <Suspense fallback={null}>
+          <EffectNode projectName="living-room"></EffectNode>
+        </Suspense>
       </Canvas>
+
       <div className=" absolute bottom-0 right-0 px-3 py-3">
         <div className="bg-white rounded-lg p-1 px-3">
           <a
