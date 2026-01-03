@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#ff006a",
+				"baseColor": "#00ff8c",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#ff006a",
+				"baseColor": "#00ff8c",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
