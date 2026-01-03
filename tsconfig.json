@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "effectnode-developer-tools/*": ["./effectnode-developer-tools/*"],
       "@/*": ["./src/*"]
     }
   },
@@ -28,7 +29,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
+    "**/*.mts",
+    "./effectnode-developer-tools/*"
   ],
   "exclude": ["node_modules"]
 }

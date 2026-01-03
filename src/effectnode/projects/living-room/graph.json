@@ -1,0 +1,950 @@
+{
+	"settings": [
+		{
+			"codeID": "_6wwhxoe_fp2fg97",
+			"nodeID": "_quzfyzi_iybz833",
+			"nodeTitle": "node",
+			"spaceID": "new-space",
+			"code": "",
+			"data": [
+				{
+					"_id": "_340ozy1_bvl61x2",
+					"label": "speed",
+					"type": "range",
+					"min": 0,
+					"max": 1,
+					"step": 0.01,
+					"value": 0.48000000000000004
+				},
+				{
+					"_id": "_wqx0zng_5cvbuet",
+					"label": "baseColor",
+					"type": "color",
+					"value": "#003eff"
+				},
+				{
+					"_id": "_v22exa7_h0arilg",
+					"label": "name",
+					"type": "text",
+					"value": "hi dear"
+				},
+				{
+					"_id": "_uxvekoz_vlcqhii",
+					"label": "happyColor",
+					"type": "color",
+					"value": "#c10e0e"
+				}
+			],
+			"title": "happy"
+		},
+		{
+			"codeID": "_x027a1w_24c0grb",
+			"nodeID": "_ck2nyne_fksh47i",
+			"nodeTitle": "node",
+			"spaceID": "new-space",
+			"code": "",
+			"data": [
+				{
+					"_id": "_qyubhzw_05aof46",
+					"label": "pointLightColor",
+					"type": "color",
+					"value": "#ffffff"
+				},
+				{
+					"_id": "_3cr50ux_ktd5kuq",
+					"label": "intensity",
+					"type": "range",
+					"min": 0,
+					"max": 100.00000000000001,
+					"step": 0.09999999999999998,
+					"value": 2.999999999999999
+				}
+			],
+			"title": "light",
+			"metaData": {
+				"baseColor": "#73ff00",
+				"intensity": "375",
+				"lightColor": "#ffd0a3",
+				"move": false,
+				"light1": [
+					0.9993393322328581,
+					0,
+					0.036344174944346164,
+					0,
+					0,
+					1,
+					0,
+					0,
+					-0.036344174944346164,
+					0,
+					0.9993393322328581,
+					0,
+					-1.0718873308245538,
+					-0.7308185850002467,
+					-6.265336277733725,
+					1
+				],
+				"light2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-20.915710802256733,
+					-1.847065772785203,
+					-26.34963401666557,
+					1
+				],
+				"gizmo": true,
+				"light3": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					21.262592982488336,
+					-2.229757952186592,
+					-27.649544870645485,
+					1
+				],
+				"light1-lamp": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-9.83493879759439,
+					-2.1472780998355785,
+					-7.2020176414626285,
+					1
+				],
+				"light2-plant": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-14.17018454418859,
+					-2.0426214706069703,
+					-19.854800991712047,
+					1
+				],
+				"light-lamp-2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0.9977501152330429,
+					0.06704258014463275,
+					0,
+					0,
+					-0.06704258014463275,
+					0.9977501152330429,
+					0,
+					21.113336502945423,
+					-4.756812361874067,
+					-28.371555477680655,
+					1
+				]
+			}
+		},
+		{
+			"codeID": "_s3xpscu_",
+			"nodeID": "_p0j5ukb_",
+			"nodeTitle": "node",
+			"spaceID": "space-me",
+			"code": "",
+			"data": [
+				{
+					"_id": "_r5cktk0_",
+					"label": "speed",
+					"type": "range",
+					"min": 0,
+					"max": 1,
+					"step": 0.01,
+					"value": 0
+				},
+				{
+					"_id": "_dbh4byd_",
+					"label": "baseColor",
+					"type": "color",
+					"value": "#ff0000"
+				},
+				{
+					"_id": "_g6hf7uw_",
+					"label": "name",
+					"type": "text",
+					"value": "hi dear"
+				}
+			],
+			"title": "mesh",
+			"metaData": {
+				"baseColor": "#73ff00",
+				"intensity": "375",
+				"lightColor": "#ffd0a3",
+				"move": false,
+				"light1": [
+					0.9993393322328581,
+					0,
+					0.036344174944346164,
+					0,
+					0,
+					1,
+					0,
+					0,
+					-0.036344174944346164,
+					0,
+					0.9993393322328581,
+					0,
+					-1.0718873308245538,
+					-0.7308185850002467,
+					-6.265336277733725,
+					1
+				],
+				"light2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-20.915710802256733,
+					-1.847065772785203,
+					-26.34963401666557,
+					1
+				],
+				"gizmo": true,
+				"light3": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					21.262592982488336,
+					-2.229757952186592,
+					-27.649544870645485,
+					1
+				],
+				"light1-lamp": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-9.83493879759439,
+					-2.1472780998355785,
+					-7.2020176414626285,
+					1
+				],
+				"light2-plant": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-14.17018454418859,
+					-2.0426214706069703,
+					-19.854800991712047,
+					1
+				],
+				"light-lamp-2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0.9977501152330429,
+					0.06704258014463275,
+					0,
+					0,
+					-0.06704258014463275,
+					0.9977501152330429,
+					0,
+					21.113336502945423,
+					-4.756812361874067,
+					-28.371555477680655,
+					1
+				]
+			}
+		},
+		{
+			"codeID": "_ph3so9q_",
+			"nodeID": "_3z0d1ci_",
+			"nodeTitle": "node",
+			"spaceID": "living-room",
+			"code": "",
+			"data": [
+				{
+					"_id": "_k5vi8co_",
+					"label": "speed",
+					"type": "range",
+					"min": 0,
+					"max": 1,
+					"step": 0.01,
+					"value": 0
+				},
+				{
+					"_id": "_yvk7ub1_",
+					"label": "baseColor",
+					"type": "color",
+					"value": "#ff0000"
+				},
+				{
+					"_id": "_hql58y4_",
+					"label": "name",
+					"type": "text",
+					"value": "hi dear"
+				}
+			],
+			"title": "color",
+			"metaData": {
+				"baseColor": "#73ff00",
+				"intensity": "375",
+				"lightColor": "#ffd0a3",
+				"move": false,
+				"light1": [
+					0.9993393322328581,
+					0,
+					0.036344174944346164,
+					0,
+					0,
+					1,
+					0,
+					0,
+					-0.036344174944346164,
+					0,
+					0.9993393322328581,
+					0,
+					-1.0718873308245538,
+					-0.7308185850002467,
+					-6.265336277733725,
+					1
+				],
+				"light2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-20.915710802256733,
+					-1.847065772785203,
+					-26.34963401666557,
+					1
+				],
+				"gizmo": true,
+				"light3": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					21.262592982488336,
+					-2.229757952186592,
+					-27.649544870645485,
+					1
+				],
+				"light1-lamp": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-9.83493879759439,
+					-2.1472780998355785,
+					-7.2020176414626285,
+					1
+				],
+				"light2-plant": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-14.17018454418859,
+					-2.0426214706069703,
+					-19.854800991712047,
+					1
+				],
+				"light-lamp-2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0.9977501152330429,
+					0.06704258014463275,
+					0,
+					0,
+					-0.06704258014463275,
+					0.9977501152330429,
+					0,
+					21.113336502945423,
+					-4.756812361874067,
+					-28.371555477680655,
+					1
+				]
+			}
+		},
+		{
+			"codeID": "_6ihz4yh_",
+			"nodeID": "_i8sgnof_",
+			"nodeTitle": "node",
+			"spaceID": "living-room",
+			"code": "",
+			"data": [
+				{
+					"_id": "_3ofcryj_",
+					"label": "speed",
+					"type": "range",
+					"min": 0,
+					"max": 1,
+					"step": 0.01,
+					"value": 0
+				},
+				{
+					"_id": "_t2udlhy_",
+					"label": "baseColor",
+					"type": "color",
+					"value": "#ff0000"
+				},
+				{
+					"_id": "_8x3ur6x_",
+					"label": "name",
+					"type": "text",
+					"value": "hi dear"
+				}
+			],
+			"metaData": {
+				"baseColor": "#73ff00",
+				"intensity": "375",
+				"lightColor": "#ffd0a3",
+				"move": false,
+				"light1": [
+					0.9993393322328581,
+					0,
+					0.036344174944346164,
+					0,
+					0,
+					1,
+					0,
+					0,
+					-0.036344174944346164,
+					0,
+					0.9993393322328581,
+					0,
+					-1.0718873308245538,
+					-0.7308185850002467,
+					-6.265336277733725,
+					1
+				],
+				"light2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-20.915710802256733,
+					-1.847065772785203,
+					-26.34963401666557,
+					1
+				],
+				"gizmo": true,
+				"light3": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					21.262592982488336,
+					-2.229757952186592,
+					-27.649544870645485,
+					1
+				],
+				"light1-lamp": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-9.83493879759439,
+					-2.1472780998355785,
+					-7.2020176414626285,
+					1
+				],
+				"light2-plant": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-14.17018454418859,
+					-2.0426214706069703,
+					-19.854800991712047,
+					1
+				],
+				"light-lamp-2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0.9977501152330429,
+					0.06704258014463275,
+					0,
+					0,
+					-0.06704258014463275,
+					0.9977501152330429,
+					0,
+					21.113336502945423,
+					-4.756812361874067,
+					-28.371555477680655,
+					1
+				]
+			}
+		}
+	],
+	"graph": {
+		"nodes": [
+			{
+				"spaceID": "new-space",
+				"_id": "_ck2nyne_fksh47i",
+				"title": "light",
+				"position": [
+					-1.284923188302273,
+					0,
+					-2.4671294543579587
+				],
+				"inputs": [
+					{
+						"_id": "_xa0pr15_13dvvis",
+						"type": "input",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_iqg4y2i_td3fnf5",
+						"type": "input",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_igd7w4b_pflm513",
+						"type": "input",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_xfdr6s3_gfedwg5",
+						"type": "input",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_0ecnary_k6sck6v",
+						"type": "input",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					}
+				],
+				"outputs": [
+					{
+						"_id": "_6lpmebm_26fs6wf",
+						"type": "output",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_odf69fi_np77r7a",
+						"type": "output",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_2suc7zt_8bit4cg",
+						"type": "output",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_zvqp56q_3giiktp",
+						"type": "output",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					},
+					{
+						"_id": "_5vjbyyd_jkiqyp0",
+						"type": "output",
+						"nodeID": "_ck2nyne_fksh47i",
+						"label": ""
+					}
+				]
+			},
+			{
+				"spaceID": "space-me",
+				"_id": "_p0j5ukb_",
+				"title": "mesh",
+				"position": [
+					-2.025635999878342,
+					0,
+					2.140611903990109
+				],
+				"inputs": [
+					{
+						"_id": "_wdx9d7w_",
+						"type": "input",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_ki69rjo_",
+						"type": "input",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_7uguji3_",
+						"type": "input",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_1kaiths_",
+						"type": "input",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_pkhume2_",
+						"type": "input",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					}
+				],
+				"outputs": [
+					{
+						"_id": "_24vnbco_",
+						"type": "output",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_2106nkk_",
+						"type": "output",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_aq8gfi7_",
+						"type": "output",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_gl0y4tl_",
+						"type": "output",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					},
+					{
+						"_id": "_0p837q4_",
+						"type": "output",
+						"nodeID": "_p0j5ukb_",
+						"label": ""
+					}
+				]
+			},
+			{
+				"spaceID": "living-room",
+				"_id": "_3z0d1ci_",
+				"title": "color",
+				"position": [
+					-0.06557979184826718,
+					0,
+					-0.5707989454057856
+				],
+				"inputs": [
+					{
+						"_id": "_5qddwn0_",
+						"type": "input",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_n3coxai_",
+						"type": "input",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_s8rui00_",
+						"type": "input",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_49wxgye_",
+						"type": "input",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_wpqbdda_",
+						"type": "input",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					}
+				],
+				"outputs": [
+					{
+						"_id": "_72zv372_",
+						"type": "output",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_1kiszfm_",
+						"type": "output",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_zn7mgkh_",
+						"type": "output",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_w0yvy0g_",
+						"type": "output",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					},
+					{
+						"_id": "_rt7b9ak_",
+						"type": "output",
+						"nodeID": "_3z0d1ci_",
+						"label": ""
+					}
+				]
+			},
+			{
+				"spaceID": "living-room",
+				"_id": "_i8sgnof_",
+				"title": "sphere",
+				"position": [
+					0.3374248593233147,
+					0,
+					3.2550442788917806
+				],
+				"inputs": [
+					{
+						"_id": "_d5edtk5_",
+						"type": "input",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_3vzjdne_",
+						"type": "input",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_4op2gvx_",
+						"type": "input",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_82r8mam_",
+						"type": "input",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_6kzfu43_",
+						"type": "input",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					}
+				],
+				"outputs": [
+					{
+						"_id": "_cbmvxar_",
+						"type": "output",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_hmm81hp_",
+						"type": "output",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_drpd8si_",
+						"type": "output",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_sw7fgo5_",
+						"type": "output",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					},
+					{
+						"_id": "_71bs7wo_",
+						"type": "output",
+						"nodeID": "_i8sgnof_",
+						"label": ""
+					}
+				]
+			}
+		],
+		"edges": [
+			{
+				"id": "_tr79785_",
+				"input": {
+					"_id": "_wdx9d7w_",
+					"type": "input",
+					"nodeID": "_p0j5ukb_",
+					"label": ""
+				},
+				"output": {
+					"_id": "_72zv372_",
+					"type": "output",
+					"nodeID": "_3z0d1ci_",
+					"label": ""
+				}
+			},
+			{
+				"id": "_rd3vba6_",
+				"input": {
+					"_id": "_d5edtk5_",
+					"type": "input",
+					"nodeID": "_i8sgnof_",
+					"label": ""
+				},
+				"output": {
+					"_id": "_72zv372_",
+					"type": "output",
+					"nodeID": "_3z0d1ci_",
+					"label": ""
+				}
+			}
+		]
+	}
+}
