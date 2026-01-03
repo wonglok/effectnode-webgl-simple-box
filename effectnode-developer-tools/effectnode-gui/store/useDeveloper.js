@@ -11,181 +11,195 @@ export const useDeveloper = create((set, get) => {
     //
     workspaces: [],
     listAllGraph: () => {
-      return fetch(`/devapi/project/listAllGraph`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          //
-        }),
-      })
-        .then((r) => {
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/listAllGraph", response);
-          return response;
-        })
-        .catch((r) => {
-          console.error(r);
-        });
+      // return fetch(`/devapi/project/listAllGraph`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/listAllGraph", response);
+      //     return response;
+      //   })
+      //   .catch((r) => {
+      //     console.error(r);
+      //   });
+
+      return null
     },
     //
     listAll: () => {
-      return fetch(`/devapi/project/listAll`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          //
-        }),
-      })
-        .then((r) => {
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/listAll", response);
-          set({
-            workspaces: response,
-          });
-          return response;
-        })
-        .catch((r) => {
-          console.error(r);
-        });
+      // return fetch(`/devapi/project/listAll`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/listAll", response);
+      //     set({
+      //       workspaces: response,
+      //     });
+      //     return response;
+      //   })
+      //   .catch((r) => {
+      //     console.error(r);
+      //   });
+
+      return null
     },
 
     create: ({ title }) => {
-      return fetch(`/devapi/project/create`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          title: title,
-          //
-        }),
-      })
-        .then((r) => {
-          if (!r.ok) {
-            throw new Error(`taken`);
-          }
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/create", response);
-          return response;
-        });
+      // return fetch(`/devapi/project/create`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     title: title,
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     if (!r.ok) {
+      //       throw new Error(`taken`);
+      //     }
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/create", response);
+      //     return response;
+      //   });
+
+      return null
     },
 
     recycle: ({ title }) => {
-      return fetch(`/devapi/project/recycle`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          title: title,
-          //
-        }),
-      })
-        .then((r) => {
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/recycle", response);
+      // return fetch(`/devapi/project/recycle`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     title: title,
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/recycle", response);
 
-          return response;
-          //
-        })
-        .catch((r) => {
-          console.error(r);
-        });
+      //     return response;
+      //     //
+      //   })
+      //   .catch((r) => {
+      //     console.error(r);
+      //   });
+
+      return null
     },
 
     rename: ({ oldTitle, title }) => {
-      return fetch(`/devapi/project/rename`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          oldTitle: oldTitle,
-          title: title,
-          //
-        }),
-      })
-        .then((r) => {
-          if (!r.ok) {
-            throw new Error("name-taken");
-          }
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/rename", response);
 
-          return response;
-          //
-        });
+      return null
+      // return fetch(`/devapi/project/rename`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     oldTitle: oldTitle,
+      //     title: title,
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     if (!r.ok) {
+      //       throw new Error("name-taken");
+      //     }
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/rename", response);
+
+      //     return response;
+      //     //
+      //   });
     },
 
     clone: ({ oldTitle, title }) => {
-      return fetch(`/devapi/project/clone`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          oldTitle: oldTitle,
-          title: title,
-          //
-        }),
-      })
-        .then((r) => {
-          if (!r.ok) {
-            throw new Error("name-taken");
-          }
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/clone", response);
+      // return fetch(`/devapi/project/clone`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     oldTitle: oldTitle,
+      //     title: title,
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     if (!r.ok) {
+      //       throw new Error("name-taken");
+      //     }
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/clone", response);
 
-          return response;
-          //
-        });
+      //     return response;
+      //     //
+      //   });
+
+      return null
     },
 
     hasOne: ({ title }) => {
-      return fetch(`/devapi/project/hasOne`, {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          //
-          title: title,
-          //
-        }),
-      })
-        .then((r) => {
-          return r.json();
-        })
-        .then((response) => {
-          console.log("project/hasOne", response);
+      // return fetch(`/devapi/project/hasOne`, {
+      //   method: "POST",
+      //   headers: {
+      //     "content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     //
+      //     title: title,
+      //     //
+      //   }),
+      // })
+      //   .then((r) => {
+      //     return r.json();
+      //   })
+      //   .then((response) => {
+      //     console.log("project/hasOne", response);
 
-          return response;
-        })
-        .catch((r) => {
-          console.error(r);
-        });
+      //     return response;
+      //   })
+      //   .catch((r) => {
+      //     console.error(r);
+      //   });
+
+      return title
     },
 
     // getProjectGraph: ({ title }) => {
@@ -265,7 +279,6 @@ export const useDeveloper = create((set, get) => {
 
       return data
     },
-
 
     openEditor: ({ title, nodeTitle }) => {
       // let url = `/devapi/project/editor`;
