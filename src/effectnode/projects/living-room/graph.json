@@ -63,7 +63,7 @@
 			"title": "light",
 			"metaData": {
 				"baseColor": "#8cff2e",
-				"intensity": "356.1",
+				"intensity": "383",
 				"lightColor": "#ffd0a3",
 				"move": false,
 				"light1": [
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					-2.7004347258979053,
+					-2.976227881176904,
 					0,
-					0.7385075307672584
+					0.4698164452893887
 				],
 				"inputs": [
 					{
@@ -770,9 +770,9 @@
 				"_id": "_3z0d1ci_",
 				"title": "color",
 				"position": [
-					1.6098373389171765,
+					1.6457943339965238,
 					0,
-					-0.9534850820784886
+					-1.0538189879053435
 				],
 				"inputs": [
 					{
