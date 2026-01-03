@@ -208,8 +208,6 @@ export function EffectNode({
     });
   }, [onData, projects]);
 
-  //
-
   return (
     <>
       {socketMap && useRuntime && (
