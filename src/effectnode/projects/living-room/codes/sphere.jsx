@@ -2,8 +2,9 @@ import { Html, MeshTransmissionMaterial, Sphere } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
 export function ToolBox({ useStore, useAutosaveNodeData }) {
+  let baseColor = useAutosaveNodeData((r) => r.baseColor);
   return <>
-    Base Color Picker <InputColor useAutosaveNodeData={useAutosaveNodeData}></InputColor>
+    <div>{baseColor}</div>
   </>;
 }
 
@@ -33,8 +34,20 @@ export function NodeBox({ useAutosaveNodeData }) {
       <Sphere position={[2.5, 0, 0]}>
         <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
       </Sphere>
-
-
     </>
   );
 }
+
+// 
+//
+// 
+
+//
+//
+//
+
+//
+//
+//
+
+//
