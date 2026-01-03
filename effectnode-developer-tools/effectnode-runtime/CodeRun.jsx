@@ -111,7 +111,7 @@ export function CodeRun({
 
     let ioPXY = new Proxy(
       {
-        // edgesLength: edges?.length,
+        edgesLength: edges?.length,
         //
       },
       {
@@ -121,6 +121,7 @@ export function CodeRun({
             return () => {
             }
           }
+
           if (key.startsWith("out")) {
             return (idx, val) => {
               // let idx = Number(key.replace("out", ""));
