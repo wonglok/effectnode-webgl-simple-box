@@ -16,13 +16,13 @@ import { Suspense, useEffect, } from "react";
 import { RoomContent } from './shared/RoomContent'
 
 export function ToolBox({ io, useNodeMemory, files }) {
-  let baseColor = useNodeMemory((r) => r.baseColor);
-
   return <>
     <div className="w-full h-full">
       <Canvas>
         <Suspense fallback={null}>
+
           <RoomContent files={files}></RoomContent>
+
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
         </Suspense>
       </Canvas>
