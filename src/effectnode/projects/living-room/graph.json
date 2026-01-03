@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#00eaff",
+				"baseColor": "#1af0b7",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#00eaff",
+				"baseColor": "#1af0b7",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					-1.4565979857590008,
+					-1.5064684268295037,
 					0,
-					-2.048475705869099
+					-0.8992730369497268
 				],
 				"inputs": [
 					{
@@ -696,9 +696,9 @@
 				"_id": "_p0j5ukb_",
 				"title": "mesh",
 				"position": [
-					-2.13484254377781,
+					-2.26974798654668,
 					0,
-					0.21535685068097843
+					-3.1418284560020284
 				],
 				"inputs": [
 					{
