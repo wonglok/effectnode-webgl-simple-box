@@ -9,16 +9,16 @@ export const myApps = [
     type: "previewer",
     appIconText: " 🖼️ Previewer",
   },
-  {
-    _id: "appID",
-    type: "previewer2",
-    appIconText: " 🖼️ Previewer 2",
-  },
-  {
-    _id: "appID",
-    type: "files",
-    appIconText: " 🖼️ Files",
-  },
+  // {
+  //   _id: "appID",
+  //   type: "previewer2",
+  //   appIconText: " 🖼️ Previewer 2",
+  // },
+  // {
+  //   _id: "appID",
+  //   type: "files",
+  //   appIconText: " 🖼️ Files",
+  // },
 ];
 
 export const myWins = [
