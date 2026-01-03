@@ -9,9 +9,9 @@ export function ToolBox({ useNodeMemory }) {
     <div className="w-full h-full">
       <Canvas>
 
-        <MySphere useNodeMemory={useNodeMemory}></MySphere>
+        <MyMesh useNodeMemory={useNodeMemory}></MyMesh>
 
-        <PerspectiveCamera position={[0, 0, 3]} makeDefault></PerspectiveCamera>
+        <PerspectiveCamera position={[0, 0, 3.5]} makeDefault></PerspectiveCamera>
 
         <Suspense fallback={null}>
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
@@ -32,7 +32,7 @@ export function Runtime({ useNodeMemory, io }) {
 
   return <>
 
-    <MySphere useNodeMemory={useNodeMemory}></MySphere>
+    <MyMesh useNodeMemory={useNodeMemory}></MyMesh>
   </>;
 }
 
@@ -42,14 +42,14 @@ export function NodeBox({ useNodeMemory }) {
     <>
       <group position={[2.5, 0, 0]}>
         <Center top>
-          <MySphere useNodeMemory={useNodeMemory}></MySphere>
+          <MyMesh useNodeMemory={useNodeMemory}></MyMesh>
         </Center>
       </group>
     </>
   );
 }
 
-function MySphere({ useNodeMemory }) {
+function MyMesh({ useNodeMemory }) {
   let baseColor = useNodeMemory((r) => r.baseColor);
 
   return <>
