@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#ffffff",
+				"baseColor": "#5bf5ff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#ffffff",
+				"baseColor": "#5bf5ff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					0.7016261776164763,
+					0.7315692335208278,
 					0,
-					-0.28324609867606254
+					-0.44082561069004944
 				],
 				"inputs": [
 					{
@@ -696,9 +696,9 @@
 				"_id": "_p0j5ukb_",
 				"title": "room",
 				"position": [
-					-2.9862921525543586,
+					-1.82626438653565,
 					0,
-					-1.5081351415851274
+					-1.2538916830753832
 				],
 				"inputs": [
 					{
