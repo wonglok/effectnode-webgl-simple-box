@@ -20,6 +20,12 @@ import { clone } from "three/examples/jsm/utils/SkeletonUtils";
 export function ToolBox({ useNodeMemory, files }) {
   let baseColor = useNodeMemory((r) => r.baseColor);
 
+  useEffect(() => {
+    io.output(0, <Suspense fallback={null}>
+      <Content files={files}></Content>
+    </Suspense>)
+  }, [])
+
   return <>
     <div className="w-full h-full">
       <Canvas>
@@ -33,6 +39,7 @@ export function ToolBox({ useNodeMemory, files }) {
 }
 
 export function Runtime({ io, files, onLoop }) {
+
 
   return (
     <>

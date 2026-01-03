@@ -1,13 +1,23 @@
 import { Box, Center, Environment, Html, PivotControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useMemo } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { Quaternion, Vector3 } from "three";
 import { Matrix4 } from "three";
 
-export function ToolBox({ isEditing, useNodeMemory }) {
+export function ToolBox({ io, isEditing, useNodeMemory }) {
+  let [state, setState] = useState(null)
+
+  useEffect(() => {
+    io.input(0, (value) => {
+      console.log(value)
+      //
+      setState(value)
+    })
+  }, [])
+
   return <>
     <Canvas>
-
+      {state}
       <Content isEditing={true} useNodeMemory={useNodeMemory}></Content>
       <Suspense fallback={null}>
         <Environment files={[`/hdr/default.hdr`]}></Environment>
