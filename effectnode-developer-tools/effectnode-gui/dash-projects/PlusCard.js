@@ -38,6 +38,7 @@ export function PlusCard({ onReload }) {
                       .catch((r) => {
                         alert("name taken");
                       })
+                      //
                       .then(() => {
                         onReload();
                       });
