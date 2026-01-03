@@ -1,6 +1,7 @@
 import { Environment, Html, MeshTransmissionMaterial, PerspectiveCamera, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
+import { EnergyArtCompo } from "../../../../../effectnode-developer-tools/effectnode-gui/canvas/WebGL/EnergyArt/EnergyArtCompo";
 
 export function ToolBox({ useNodeMemory }) {
   return <>
@@ -48,6 +49,9 @@ function MySphere({ useNodeMemory }) {
   let baseColor = useNodeMemory((r) => r.baseColor);
 
   return <>
+    <group scale={0.021}>
+      <EnergyArtCompo></EnergyArtCompo>
+    </group>
     <Sphere position={[0, 0, 0]}>
       <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
     </Sphere>
