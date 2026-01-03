@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#fe0d72",
+				"baseColor": "#ff006a",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#fe0d72",
+				"baseColor": "#ff006a",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					-3.0494280125398094,
+					-3.264660991065374,
 					0,
-					-0.5720224847150246
+					-0.45447956750151963
 				],
 				"inputs": [
 					{
@@ -694,11 +694,11 @@
 			{
 				"spaceID": "space-me",
 				"_id": "_p0j5ukb_",
-				"title": "mesh",
+				"title": "room",
 				"position": [
-					-2.26974798654668,
+					-2.531147239513439,
 					0,
-					-3.1418284560020284
+					1.5670351241777607
 				],
 				"inputs": [
 					{

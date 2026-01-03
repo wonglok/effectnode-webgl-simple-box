@@ -414,28 +414,28 @@ export class EditorCore {
       }
 
       ///////
-      {
-        let win = wins.find((r) => r.type === "previewer2");
-        // if (win) {
-        //   win.width = window.innerWidth * 0.5;
-        //   win.height = (window.innerHeight - 130) / 2 - 15;
-        //   win.top = (window.innerHeight - 130) / 2 + 30;
-        //   win.left = 10;
-        // }
+      // {
+      //   let win = wins.find((r) => r.type === "previewer2");
+      //   // if (win) {
+      //   //   win.width = window.innerWidth * 0.5;
+      //   //   win.height = (window.innerHeight - 130) / 2 - 15;
+      //   //   win.top = (window.innerHeight - 130) / 2 + 30;
+      //   //   win.left = 10;
+      //   // }
 
-        if (win) {
-          win.width = window.innerWidth * 0.5 - 30;
-          win.height = (window.innerHeight - 130) / 2 - 15;
-          win.top = 15;
-          win.left = window.innerWidth * 0.5 + 20;
-        }
+      //   if (win) {
+      //     win.width = window.innerWidth * 0.5 - 30;
+      //     win.height = (window.innerHeight - 130) / 2 - 15;
+      //     win.top = 15;
+      //     win.left = window.innerWidth * 0.5 + 20;
+      //   }
 
-        this.setState({
-          apps: [...apps],
-          wins: [...wins],
-          overlayPop: "",
-        });
-      }
+      //   this.setState({
+      //     apps: [...apps],
+      //     wins: [...wins],
+      //     overlayPop: "",
+      //   });
+      // }
 
       ///////
 

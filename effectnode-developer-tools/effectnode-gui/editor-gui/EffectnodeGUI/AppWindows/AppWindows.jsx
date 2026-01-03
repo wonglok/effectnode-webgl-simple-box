@@ -30,11 +30,12 @@ export function AppWindows({ useStore }) {
                 <Previewer win={win} useStore={useStore}></Previewer>
               </>
             )}
-            {win.type === "previewer2" && (
+
+            {/* {win.type === "previewer2" && (
               <>
                 <Previewer2 win={win} useStore={useStore}></Previewer2>
               </>
-            )}
+            )} */}
             {win.type === "coder" && (
               <>
                 <Code win={win} useStore={useStore}></Code>

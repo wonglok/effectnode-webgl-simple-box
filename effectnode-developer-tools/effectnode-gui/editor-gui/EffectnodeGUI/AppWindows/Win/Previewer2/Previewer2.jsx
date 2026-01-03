@@ -41,7 +41,6 @@ export function Previewer2({ win, useStore }) {
 
   return (
     <>
-      {ef}
 
       <Output2D></Output2D>
 
