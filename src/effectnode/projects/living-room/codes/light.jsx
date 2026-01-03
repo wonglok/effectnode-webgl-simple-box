@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { Quaternion, Vector3 } from "three";
 import { Matrix4 } from "three";
+import { RoomContent } from "./shared/RoomContent";
 
 export function ToolBox({ io, isEditing, useNodeMemory }) {
   let [state, setState] = useState(null)
@@ -20,6 +21,7 @@ export function ToolBox({ io, isEditing, useNodeMemory }) {
       {state}
       <Content isEditing={true} useNodeMemory={useNodeMemory}></Content>
       <Suspense fallback={null}>
+        <RoomContent></RoomContent>
         <Environment files={[`/hdr/default.hdr`]}></Environment>
       </Suspense>
     </Canvas>
@@ -31,7 +33,7 @@ export function Runtime({ isEditing, useNodeMemory, io, files }) {
   //
   return (
     <>
-      <Content isEditing={isEditing} useNodeMemory={useNodeMemory}></Content>
+      <Content isEditing={false} useNodeMemory={useNodeMemory}></Content>
     </>
   );
 }
