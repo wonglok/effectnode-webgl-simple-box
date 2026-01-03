@@ -44,8 +44,6 @@ export function NodeBox({ useNodeMemory }) {
   );
 }
 
-// 
-
 function MySphere({ useNodeMemory }) {
   let baseColor = useNodeMemory((r) => r.baseColor);
 
