@@ -2,7 +2,6 @@ import { Code } from "./Win/Code/Code";
 import { EditorBox } from "./Win/EditorBox/EditorBox";
 import { WinGeneric } from "./Win/Generic/WinGeneric";
 import { Previewer } from "./Win/Previewer/Previewer";
-import { Previewer2 } from "./Win/Previewer2/Previewer2";
 
 export function AppWindows({ useStore }) {
   // let apps = useStore((r) => r.apps)
@@ -11,6 +10,7 @@ export function AppWindows({ useStore }) {
   return (
     <>
       {wins.map((win, idx) => {
+        //
         return (
           <WinGeneric
             enableCover={win.type === "previewer"}
@@ -20,6 +20,8 @@ export function AppWindows({ useStore }) {
             topBar={<div>{win.title}</div>}
             key={win._id + "win"}
           >
+
+
             {win.type === "editor" && (
               <>
                 <EditorBox win={win} useStore={useStore}></EditorBox>

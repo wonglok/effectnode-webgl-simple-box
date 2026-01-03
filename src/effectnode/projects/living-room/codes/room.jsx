@@ -23,7 +23,6 @@ export function ToolBox({ useNodeMemory, files }) {
   return <>
     <div className="w-full h-full">
       <Canvas>
-
         <Suspense fallback={null}>
           <Content files={files}></Content>
           <Environment files={[`/hdr/default.hdr`]} background></Environment>

@@ -1,59 +1,72 @@
-import { Box, Center, Html, PivotControls, Sphere } from "@react-three/drei";
-import { useMemo } from "react";
+import { Box, Center, Environment, Html, PivotControls, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useMemo } from "react";
 import { Quaternion, Vector3 } from "three";
 import { Matrix4 } from "three";
 
-export function ToolBox({ useNodeMemory }) {
+export function ToolBox({ isEditing, useNodeMemory }) {
   return <>
-    Toolbox
+    <Canvas>
+
+      <Content isEditing={true} useNodeMemory={useNodeMemory}></Content>
+      <Suspense fallback={null}>
+        <Environment files={[`/hdr/default.hdr`]}></Environment>
+      </Suspense>
+    </Canvas>
   </>;
 }
 
 export function Runtime({ isEditing, useNodeMemory, io, files }) {
   //
-  let lightColor = useNodeMemory((r) => r.lightColor) || "#ffffff";
-  let intensity = useNodeMemory((r) => r.intensity) || 1;
-
   //
   return (
     <>
-      <MoverGate
-        name="light2-plant"
-        isEditing={isEditing}
-        useNodeMemory={useNodeMemory}
-      >
-        <pointLight
-          castShadow
-          shadow-bias={-0.0002}
-          color={lightColor}
-          intensity={intensity}
-        ></pointLight>
-      </MoverGate>
-
-      <MoverGate
-        name="light-lamp-2"
-        isEditing={isEditing}
-        useNodeMemory={useNodeMemory}
-      >
-        <pointLight
-          castShadow
-          shadow-bias={-0.0002}
-          color={lightColor}
-          intensity={intensity}
-        ></pointLight>
-      </MoverGate>
-
-      <group>
-        <pointLight
-          intensity={intensity}
-          color={lightColor}
-          position={[22.0973094478636, -5.32978595305698, -20.045753251723227]}
-        ></pointLight>
-      </group>
-
-      {/*   */}
+      <Content isEditing={isEditing} useNodeMemory={useNodeMemory}></Content>
     </>
   );
+}
+
+function Content({ isEditing, useNodeMemory }) {
+  //
+  let lightColor = useNodeMemory((r) => r.lightColor) || "#ffffff";
+  let intensity = useNodeMemory((r) => r.intensity) || 1;
+
+  return <>
+    <MoverGate
+      name="light2-plant"
+      isEditing={isEditing}
+      useNodeMemory={useNodeMemory}
+    >
+      <pointLight
+        castShadow
+        shadow-bias={-0.0002}
+        color={lightColor}
+        intensity={intensity}
+      ></pointLight>
+    </MoverGate>
+
+    <MoverGate
+      name="light-lamp-2"
+      isEditing={isEditing}
+      useNodeMemory={useNodeMemory}
+    >
+      <pointLight
+        castShadow
+        shadow-bias={-0.0002}
+        color={lightColor}
+        intensity={intensity}
+      ></pointLight>
+    </MoverGate>
+
+    <group>
+      <pointLight
+        intensity={intensity}
+        color={lightColor}
+        position={[22.0973094478636, -5.32978595305698, -20.045753251723227]}
+      ></pointLight>
+    </group>
+  </>
+
 }
 
 function MoverGate({ isEditing, name = "light1", useNodeMemory, children }) {

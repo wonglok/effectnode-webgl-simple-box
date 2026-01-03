@@ -278,7 +278,6 @@ export function WinGeneric({
 
   let activeColor = active ? `#000000` : `#bababa`;
 
-  //
   return (
     <>
       <div
@@ -523,6 +522,8 @@ export function WinGeneric({
             mouseState.start = [ev.pageX, ev.pageY];
             mouseState.now = [ev.pageX, ev.pageY];
             mouseState.last = [ev.pageX, ev.pageY];
+
+            //
             useStore.setState({
               mouseState: { ...mouseState },
             });
