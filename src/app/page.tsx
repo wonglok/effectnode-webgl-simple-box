@@ -1,5 +1,6 @@
 "use client";
 
+import { CameraControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { EffectNode } from "effectnode-developer-tools/effectnode-runtime/EffectNode";
 import { Suspense } from "react";
@@ -11,6 +12,8 @@ export default function Home() {
         <Suspense fallback={null}>
           <EffectNode projectName="living-room"></EffectNode>
         </Suspense>
+
+        <CameraControls></CameraControls>
       </Canvas>
 
       <div className=" absolute bottom-0 right-0 px-3 py-3">
