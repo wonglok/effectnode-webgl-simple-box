@@ -63,8 +63,8 @@
 			"title": "light",
 			"metaData": {
 				"baseColor": "#8cff2e",
-				"intensity": "261.3",
-				"lightColor": "#ffc085",
+				"intensity": "423.3",
+				"lightColor": "#ffb36b",
 				"move": false,
 				"light1": [
 					0.9993393322328581,
@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#85f0f8",
+				"baseColor": "#bafaff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#85f0f8",
+				"baseColor": "#bafaff",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -622,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					0.7887946001465875,
+					0.3881334261697382,
 					0,
-					0.008692486752125195
+					-0.15390842827842066
 				],
 				"inputs": [
 					{
@@ -696,9 +696,9 @@
 				"_id": "_p0j5ukb_",
 				"title": "room",
 				"position": [
-					-1.4728299091341983,
+					-1.4784506479300403,
 					0,
-					-0.9946597022595332
+					-1.0198271067007747
 				],
 				"inputs": [
 					{
@@ -770,9 +770,9 @@
 				"_id": "_3z0d1ci_",
 				"title": "color",
 				"position": [
-					-3.320019990291576,
+					-3.414517696335783,
 					0,
-					0.4537420067417872
+					0.3285765725986085
 				],
 				"inputs": [
 					{
