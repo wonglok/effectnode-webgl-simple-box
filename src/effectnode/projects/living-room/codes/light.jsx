@@ -5,7 +5,7 @@ import { Quaternion, Vector3 } from "three";
 import { Matrix4 } from "three";
 import { RoomContent } from "./shared/RoomContent";
 
-export function ToolBox({ io, isEditing, useNodeMemory }) {
+export function ToolBox({ io, files, isEditing, useNodeMemory }) {
   let [state, setState] = useState(null)
 
   useEffect(() => {
@@ -21,8 +21,8 @@ export function ToolBox({ io, isEditing, useNodeMemory }) {
       {state}
       <Content isEditing={true} useNodeMemory={useNodeMemory}></Content>
       <Suspense fallback={null}>
-        <RoomContent></RoomContent>
-        <Environment files={[`/hdr/default.hdr`]}></Environment>
+        <RoomContent files={files}></RoomContent>
+        <Environment environmentIntensity={0.0} files={[`/hdr/default.hdr`]}></Environment>
       </Suspense>
     </Canvas>
   </>;
