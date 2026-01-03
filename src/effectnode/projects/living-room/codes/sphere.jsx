@@ -8,7 +8,7 @@ export function ToolBox({ useStore, useNodeMemory }) {
     <div className="w-full h-full">
       <Canvas>
         <Sphere scale={2}>
-          <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
+          <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} anisotropy={0.1} chromaticAberration={1} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
         </Sphere>
         <Suspense fallback={null}>
           <Environment files={[`/hdr/default.hdr`]} background></Environment>
@@ -50,3 +50,7 @@ export function NodeBox({ useNodeMemory }) {
 
 // 
 // 
+//
+//
+//
+//
