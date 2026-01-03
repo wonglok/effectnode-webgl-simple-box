@@ -226,7 +226,7 @@ export function EffectNode({
 
                 return (
                   <CodeRun
-                    // useAutosaveNodeData={useAutosaveNodeData}
+                    // useNodeMemory={useNodeMemory}
                     projectName={projectName}
                     mode={"runtime"}
                     key={node?._id + codeImple?._id}
@@ -241,7 +241,7 @@ export function EffectNode({
 
           {mode === "toolbox" && nodeID && (
             <CodeRun
-              // useAutosaveNodeData={useAutosaveNodeData}
+              // useNodeMemory={useNodeMemory}
               projectName={projectName}
               mode={"toolbox"}
               key={nodeID + codeImple?._id}
@@ -255,7 +255,7 @@ export function EffectNode({
 
           {mode === "node" && nodeID && (
             <CodeRun
-              // useAutosaveNodeData={useAutosaveNodeData}
+              // useNodeMemory={useNodeMemory}
               projectName={projectName}
               mode={"node"}
               key={nodeID + codeImple?._id}

@@ -3,16 +3,16 @@ import { useMemo } from "react";
 import { Quaternion, Vector3 } from "three";
 import { Matrix4 } from "three";
 
-export function ToolBox({ useAutosaveNodeData }) {
+export function ToolBox({ useNodeMemory }) {
   return <>
     Toolbox
   </>;
 }
 
-export function Runtime({ isEditing, useAutosaveNodeData, io, files }) {
+export function Runtime({ isEditing, useNodeMemory, io, files }) {
   //
-  let lightColor = useAutosaveNodeData((r) => r.lightColor) || "#ffffff";
-  let intensity = useAutosaveNodeData((r) => r.intensity) || 1;
+  let lightColor = useNodeMemory((r) => r.lightColor) || "#ffffff";
+  let intensity = useNodeMemory((r) => r.intensity) || 1;
 
   //
   return (
@@ -20,7 +20,7 @@ export function Runtime({ isEditing, useAutosaveNodeData, io, files }) {
       <MoverGate
         name="light2-plant"
         isEditing={isEditing}
-        useAutosaveNodeData={useAutosaveNodeData}
+        useNodeMemory={useNodeMemory}
       >
         <pointLight
           castShadow
@@ -33,7 +33,7 @@ export function Runtime({ isEditing, useAutosaveNodeData, io, files }) {
       <MoverGate
         name="light-lamp-2"
         isEditing={isEditing}
-        useAutosaveNodeData={useAutosaveNodeData}
+        useNodeMemory={useNodeMemory}
       >
         <pointLight
           castShadow
@@ -56,11 +56,11 @@ export function Runtime({ isEditing, useAutosaveNodeData, io, files }) {
   );
 }
 
-function MoverGate({ isEditing, name = "light1", useAutosaveNodeData, children }) {
+function MoverGate({ isEditing, name = "light1", useNodeMemory, children }) {
   let moveData =
-    useAutosaveNodeData((r) => r[name]) || new Matrix4().identity().toArray();
+    useNodeMemory((r) => r[name]) || new Matrix4().identity().toArray();
 
-  let gizmo = useAutosaveNodeData((r) => r.gizmo) || false;
+  let gizmo = useNodeMemory((r) => r.gizmo) || false;
   let { m4, position, scale, quaternion } = useMemo(() => {
     let m4 = new Matrix4().fromArray(moveData);
 
@@ -85,7 +85,7 @@ function MoverGate({ isEditing, name = "light1", useAutosaveNodeData, children }
       matrix={m4}
       scale={10}
       onDrag={(ev) => {
-        useAutosaveNodeData.setState({
+        useNodeMemory.setState({
           [name]: ev.toArray(),
         });
       }}
@@ -100,7 +100,7 @@ function MoverGate({ isEditing, name = "light1", useAutosaveNodeData, children }
           onClick={() => {
             let ev = new Matrix4().identity();
             ev.copyPosition(m4);
-            useAutosaveNodeData.setState({
+            useNodeMemory.setState({
               [name]: ev.toArray(),
             });
           }}
@@ -116,7 +116,7 @@ function MoverGate({ isEditing, name = "light1", useAutosaveNodeData, children }
   );
 }
 
-export function NodeBox({ useAutosaveNodeData }) {
+export function NodeBox({ useNodeMemory }) {
   return (
     <group rotation={[0, 0, 0]}>
       <Center>
@@ -140,15 +140,15 @@ export function NodeBox({ useAutosaveNodeData }) {
             }}
             className="w-full h-full"
           >
-            <GizmoMove useAutosaveNodeData={useAutosaveNodeData}></GizmoMove>
+            <GizmoMove useNodeMemory={useNodeMemory}></GizmoMove>
             <InputRange
               name={`intensity`}
               max={500}
-              useAutosaveNodeData={useAutosaveNodeData}
+              useNodeMemory={useNodeMemory}
             ></InputRange>
             <InputColor
               name={`lightColor`}
-              useAutosaveNodeData={useAutosaveNodeData}
+              useNodeMemory={useNodeMemory}
             ></InputColor>
           </div>
         </Html>
@@ -157,9 +157,9 @@ export function NodeBox({ useAutosaveNodeData }) {
   );
 }
 
-function GizmoMove({ useAutosaveNodeData }) {
+function GizmoMove({ useNodeMemory }) {
   let name = "gizmo";
-  let value = useAutosaveNodeData((r) => r[name]);
+  let value = useNodeMemory((r) => r[name]);
   return (
     <div>
       {" Gismo: "}
@@ -167,7 +167,7 @@ function GizmoMove({ useAutosaveNodeData }) {
         type="checkbox"
         checked={value}
         onChange={() => {
-          useAutosaveNodeData.setState({
+          useNodeMemory.setState({
             [name]: !value,
           });
         }}
@@ -176,8 +176,8 @@ function GizmoMove({ useAutosaveNodeData }) {
   );
 }
 
-function InputColor({ name, useAutosaveNodeData }) {
-  let value = useAutosaveNodeData((r) => r[name]);
+function InputColor({ name, useNodeMemory }) {
+  let value = useNodeMemory((r) => r[name]);
 
   return (
     <input
@@ -185,7 +185,7 @@ function InputColor({ name, useAutosaveNodeData }) {
       type="color"
       value={value}
       onChange={(va) => {
-        useAutosaveNodeData.setState({
+        useNodeMemory.setState({
           [name]: va.target.value,
         });
       }}
@@ -193,8 +193,8 @@ function InputColor({ name, useAutosaveNodeData }) {
   );
 }
 
-function InputRange({ name, step = 0.1, min = 0, max = 20, useAutosaveNodeData }) {
-  let value = useAutosaveNodeData((r) => r[name]);
+function InputRange({ name, step = 0.1, min = 0, max = 20, useNodeMemory }) {
+  let value = useNodeMemory((r) => r[name]);
 
   return (
     <input
@@ -205,7 +205,7 @@ function InputRange({ name, step = 0.1, min = 0, max = 20, useAutosaveNodeData }
       step={step}
       value={value}
       onChange={(va) => {
-        useAutosaveNodeData.setState({
+        useNodeMemory.setState({
           [name]: va.target.value,
         });
       }}

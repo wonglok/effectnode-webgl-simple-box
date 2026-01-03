@@ -1,19 +1,29 @@
-import { Html, MeshTransmissionMaterial, Sphere } from "@react-three/drei";
-import { useEffect, useState } from "react";
+import { Environment, Html, MeshTransmissionMaterial, Sphere } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useEffect, useState } from "react";
 
-export function ToolBox({ useStore, useAutosaveNodeData }) {
-  let baseColor = useAutosaveNodeData((r) => r.baseColor);
+export function ToolBox({ useStore, useNodeMemory }) {
+  let baseColor = useNodeMemory((r) => r.baseColor);
   return <>
-    <div>{baseColor}</div>
+    <div className="w-full h-full">
+      <Canvas>
+        <Sphere scale={2}>
+          <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
+        </Sphere>
+        <Suspense fallback={null}>
+          <Environment files={[`/hdr/default.hdr`]} background></Environment>
+        </Suspense>
+      </Canvas>
+    </div>
   </>;
 }
 
-export function Runtime({ useAutosaveNodeData, io }) {
-  let baseColor = useAutosaveNodeData((r) => r.baseColor);
+export function Runtime({ useNodeMemory, io }) {
+  let baseColor = useNodeMemory((r) => r.baseColor);
 
   useEffect(() => {
     io.input(0, (v) => {
-      useAutosaveNodeData.setState({
+      useNodeMemory.setState({
         baseColor: v
       })
     })
@@ -26,8 +36,8 @@ export function Runtime({ useAutosaveNodeData, io }) {
   </>;
 }
 
-export function NodeBox({ useAutosaveNodeData }) {
-  let baseColor = useAutosaveNodeData((r) => r.baseColor);
+export function NodeBox({ useNodeMemory }) {
+  let baseColor = useNodeMemory((r) => r.baseColor);
 
   return (
     <>

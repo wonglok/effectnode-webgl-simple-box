@@ -17,7 +17,7 @@ export function CodeRun({
   // onLoop,
   useEditorStore,
   mode,
-  // useAutosaveNodeData,
+  // useNodeMemory,
 }) {
   let graph = useRuntime((r) => r.graph) || {};
   let nodes = graph.nodes;
@@ -31,7 +31,7 @@ export function CodeRun({
   let setting = settings.find((r) => r.nodeID === nodeID);
 
 
-  let useAutosaveNodeData = useMemo(() => {
+  let useNodeMemory = useMemo(() => {
     let make = () => {
       return create((set, get) => {
         //
@@ -242,22 +242,22 @@ export function CodeRun({
   }, [mode, nodeID, useEditorStore]);
 
   useEffect(() => {
-    useAutosaveNodeData.setState({ ...extendAPI.boxData });
-  }, [extendAPI, useAutosaveNodeData]);
+    useNodeMemory.setState({ ...extendAPI.boxData });
+  }, [extendAPI, useNodeMemory]);
 
   useEffect(() => {
     //
 
     let timer = 0;
 
-    return useAutosaveNodeData.subscribe((now, b4) => {
+    return useNodeMemory.subscribe((now, b4) => {
       for (let each in now) {
         extendAPI.boxData[each] = now[each];
       }
 
       extendAPI.saveBoxData();
     });
-  }, [useAutosaveNodeData, mode, nodeID, useEditorStore, extendAPI]);
+  }, [useNodeMemory, mode, nodeID, useEditorStore, extendAPI]);
 
   return (
     <>
@@ -273,7 +273,7 @@ export function CodeRun({
           domElement={domElement}
           //
           isEditing={useEditorStore}
-          useAutosaveNodeData={useAutosaveNodeData}
+          useNodeMemory={useNodeMemory}
           io={io}
         //
         ></Algorithm>
