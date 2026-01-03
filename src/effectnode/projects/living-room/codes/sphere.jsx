@@ -1,4 +1,4 @@
-import { Environment, Html, MeshTransmissionMaterial, PerspectiveCamera, Sphere } from "@react-three/drei";
+import { Center, Environment, Html, MeshTransmissionMaterial, PerspectiveCamera, RoundedBox, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 import { EnergyArtCompo } from "./shared/EnergyArt/EnergyArtCompo";
@@ -31,6 +31,7 @@ export function Runtime({ useNodeMemory, io }) {
   }, [io]);
 
   return <>
+
     <MySphere useNodeMemory={useNodeMemory}></MySphere>
   </>;
 }
@@ -40,7 +41,9 @@ export function NodeBox({ useNodeMemory }) {
   return (
     <>
       <group position={[2.5, 0, 0]}>
-        <MySphere useNodeMemory={useNodeMemory}></MySphere>
+        <Center top>
+          <MySphere useNodeMemory={useNodeMemory}></MySphere>
+        </Center>
       </group>
     </>
   );
@@ -50,12 +53,12 @@ function MySphere({ useNodeMemory }) {
   let baseColor = useNodeMemory((r) => r.baseColor);
 
   return <>
-    <group scale={0.025}>
+    <group scale={0.01}>
       <EnergyWaveCompo></EnergyWaveCompo>
     </group>
-    <Sphere position={[0, 0, 0]}>
+    <RoundedBox args={[2, 2, 2]} bevelSegments={5} radius={0.25} position={[0, 0, 0]}>
       <MeshTransmissionMaterial transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
-    </Sphere>
+    </RoundedBox>
   </>
 }
 

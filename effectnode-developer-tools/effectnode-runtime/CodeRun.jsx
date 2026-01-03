@@ -232,7 +232,9 @@ export function CodeRun({
 
 
         if (mode === "runtime" && !useEditorStore) {
-          console.log("missing useEditorStore");
+          //
+          // console.log("missing useEditorStore");
+          //
         }
         // if (mode === "runtime") {
         //   if (process.env.NODE_ENV === "development") {
