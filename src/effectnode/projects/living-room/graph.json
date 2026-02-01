@@ -354,7 +354,7 @@
 			],
 			"title": "color",
 			"metaData": {
-				"baseColor": "#ff0000",
+				"baseColor": "#ff5c5c",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -499,7 +499,7 @@
 				}
 			],
 			"metaData": {
-				"baseColor": "#ff0000",
+				"baseColor": "#ff5c5c",
 				"intensity": "375",
 				"lightColor": "#ffd0a3",
 				"move": false,
@@ -770,9 +770,9 @@
 				"_id": "_3z0d1ci_",
 				"title": "color",
 				"position": [
-					-3.047255713623147,
+					-3.1981736077951615,
 					0,
-					0.12444714739129514
+					0.7925994713539857
 				],
 				"inputs": [
 					{
