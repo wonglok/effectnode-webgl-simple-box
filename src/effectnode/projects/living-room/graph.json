@@ -64,7 +64,7 @@
 			"metaData": {
 				"baseColor": "#8cff2e",
 				"intensity": "500",
-				"lightColor": "#ffb06b",
+				"lightColor": "#ffd7b3",
 				"move": false,
 				"light1": [
 					0.9993393322328581,
@@ -327,7 +327,7 @@
 			"codeID": "_ph3so9q_",
 			"nodeID": "_3z0d1ci_",
 			"nodeTitle": "node",
-			"spaceID": "loklok-ocean",
+			"spaceID": "living-room",
 			"code": "",
 			"data": [
 				{
@@ -466,22 +466,18 @@
 					-4.615263742568061,
 					-28.362044293959098,
 					1
-				],
-				"primaryColor": "#4da6ff",
-				"secondaryColor": "#1f40e5",
-				"backgroundColor": "#ffffff",
-				"textColor": "#8d5cff"
+				]
 			}
 		},
 		{
-			"codeID": "_ypbzpmk_",
-			"nodeID": "_0gdv6pp_",
+			"codeID": "_6ihz4yh_",
+			"nodeID": "_i8sgnof_",
 			"nodeTitle": "node",
-			"spaceID": "loklok-ocean",
+			"spaceID": "living-room",
 			"code": "",
 			"data": [
 				{
-					"_id": "_edlirji_",
+					"_id": "_3ofcryj_",
 					"label": "speed",
 					"type": "range",
 					"min": 0,
@@ -490,20 +486,133 @@
 					"value": 0
 				},
 				{
-					"_id": "_11g27d1_",
+					"_id": "_t2udlhy_",
 					"label": "baseColor",
 					"type": "color",
 					"value": "#ff0000"
 				},
 				{
-					"_id": "_c1mc6iq_",
+					"_id": "_8x3ur6x_",
 					"label": "name",
 					"type": "text",
 					"value": "hi dear"
 				}
 			],
-			"title": "water",
-			"metaData": {}
+			"metaData": {
+				"baseColor": "#ff5c5c",
+				"intensity": "375",
+				"lightColor": "#ffd0a3",
+				"move": false,
+				"light1": [
+					0.9993393322328581,
+					0,
+					0.036344174944346164,
+					0,
+					0,
+					1,
+					0,
+					0,
+					-0.036344174944346164,
+					0,
+					0.9993393322328581,
+					0,
+					-1.0718873308245538,
+					-0.7308185850002467,
+					-6.265336277733725,
+					1
+				],
+				"light2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-20.915710802256733,
+					-1.847065772785203,
+					-26.34963401666557,
+					1
+				],
+				"gizmo": true,
+				"light3": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					21.262592982488336,
+					-2.229757952186592,
+					-27.649544870645485,
+					1
+				],
+				"light1-lamp": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-9.83493879759439,
+					-2.1472780998355785,
+					-7.2020176414626285,
+					1
+				],
+				"light2-plant": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					0,
+					0,
+					0,
+					1,
+					0,
+					-14.17018454418859,
+					-2.177349892345228,
+					-19.854800991712047,
+					1
+				],
+				"light-lamp-2": [
+					1,
+					0,
+					0,
+					0,
+					0,
+					0.9977501152330429,
+					0.06704258014463275,
+					0,
+					0,
+					-0.06704258014463275,
+					0.9977501152330429,
+					0,
+					21.113336502945423,
+					-4.615263742568061,
+					-28.362044293959098,
+					1
+				]
+			}
 		}
 	],
 	"graph": {
@@ -513,9 +622,9 @@
 				"_id": "_ck2nyne_fksh47i",
 				"title": "light",
 				"position": [
-					-3.4169876342261594,
+					-0.47238963390485367,
 					0,
-					2.6362342063080892
+					0.00977487430147983
 				],
 				"inputs": [
 					{
@@ -587,9 +696,9 @@
 				"_id": "_p0j5ukb_",
 				"title": "room",
 				"position": [
-					0.48804729728745144,
+					-0.7412587018188902,
 					0,
-					0.9213436485161208
+					-1.9180585606292313
 				],
 				"inputs": [
 					{
@@ -657,13 +766,13 @@
 				]
 			},
 			{
-				"spaceID": "loklok-ocean",
+				"spaceID": "living-room",
 				"_id": "_3z0d1ci_",
 				"title": "color",
 				"position": [
-					-7.382324139273724,
+					-3.1981736077951615,
 					0,
-					-0.7087777725449178
+					0.7925994713539857
 				],
 				"inputs": [
 					{
@@ -731,75 +840,75 @@
 				]
 			},
 			{
-				"spaceID": "loklok-ocean",
-				"_id": "_0gdv6pp_",
-				"title": "water",
+				"spaceID": "living-room",
+				"_id": "_i8sgnof_",
+				"title": "mymesh",
 				"position": [
-					0.11609108781244462,
+					-2.723412240423368,
 					0,
-					4.648931812294053
+					2.597077562423217
 				],
 				"inputs": [
 					{
-						"_id": "_1vb436v_",
+						"_id": "_d5edtk5_",
 						"type": "input",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_17nm0hq_",
+						"_id": "_3vzjdne_",
 						"type": "input",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_y68d25c_",
+						"_id": "_4op2gvx_",
 						"type": "input",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_8w0w45a_",
+						"_id": "_82r8mam_",
 						"type": "input",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_6dusial_",
+						"_id": "_6kzfu43_",
 						"type": "input",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					}
 				],
 				"outputs": [
 					{
-						"_id": "_msxnf9s_",
+						"_id": "_cbmvxar_",
 						"type": "output",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_ak0hrh3_",
+						"_id": "_hmm81hp_",
 						"type": "output",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_vhwx48u_",
+						"_id": "_drpd8si_",
 						"type": "output",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_94fg8mv_",
+						"_id": "_sw7fgo5_",
 						"type": "output",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					},
 					{
-						"_id": "_ltivvqk_",
+						"_id": "_71bs7wo_",
 						"type": "output",
-						"nodeID": "_0gdv6pp_",
+						"nodeID": "_i8sgnof_",
 						"label": ""
 					}
 				]
@@ -807,11 +916,11 @@
 		],
 		"edges": [
 			{
-				"id": "_bo9zeqc_",
+				"id": "_cracx0e_",
 				"input": {
-					"_id": "_xa0pr15_13dvvis",
+					"_id": "_d5edtk5_",
 					"type": "input",
-					"nodeID": "_ck2nyne_fksh47i",
+					"nodeID": "_i8sgnof_",
 					"label": ""
 				},
 				"output": {
