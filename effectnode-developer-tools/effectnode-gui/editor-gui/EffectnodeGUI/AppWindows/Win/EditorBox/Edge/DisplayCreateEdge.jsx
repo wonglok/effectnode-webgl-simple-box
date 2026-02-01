@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { RenderLine } from "./RenderLine";
-// import { Box } from "@react-three/drei";
 
 export function DisplayCreateEdge({ useStore }) {
   let graphCursorState = useStore((r) => r.graphCursorState);

@@ -1,4 +1,3 @@
-import { Box } from "@react-three/drei";
 import { EffectNode } from "effectnode-developer-tools/effectnode-runtime/EffectNode";
 
 export function GUI({ useStore, node }) {

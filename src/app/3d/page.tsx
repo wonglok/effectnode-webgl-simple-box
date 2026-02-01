@@ -1,26 +1,27 @@
-"use client";
+'use client'
 
-import { CameraControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { EffectNode } from "effectnode-developer-tools/effectnode-runtime/EffectNode";
-import { Suspense } from "react";
+import { CanvasGPU } from '@/components/CanvasGPU/CanvasGPU'
+import { CameraControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { EffectNode } from 'effectnode-developer-tools/effectnode-runtime/EffectNode'
+import { Suspense } from 'react'
 
 export default function Home() {
   return (
-    <div className="w-full h-full relative">
-      <Canvas>
+    <div className='w-full h-full relative'>
+      <CanvasGPU>
         <Suspense fallback={null}>
-          <EffectNode projectName="living-room"></EffectNode>
+          <EffectNode projectName='living-room'></EffectNode>
         </Suspense>
 
         <CameraControls></CameraControls>
-      </Canvas>
+      </CanvasGPU>
 
-      <div className=" absolute bottom-0 right-0 px-3 py-3">
-        <div className="bg-white rounded-lg p-1 px-3">
+      <div className=' absolute bottom-0 right-0 px-3 py-3'>
+        <div className='bg-white rounded-lg p-1 px-3'>
           <a
-            className="underline"
-            target="_blank"
+            className='underline'
+            target='_blank'
             href={`https://www.fab.com/listings/a926d36d-6460-4c6e-8aaa-c22667cb075f`}
           >
             3D Scene by Alister
@@ -28,5 +29,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

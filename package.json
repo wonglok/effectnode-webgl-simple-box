@@ -1,5 +1,5 @@
 {
-  "name": "effectnode-webgl-simple-box",
+  "name": "effectnode-by-wonglok831",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,11 +14,15 @@
     "@monaco-editor/react": "^4.7.0",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
+    "@react-three/flex": "^1.0.1",
+    "@types/md5": "^2.3.6",
     "copy-to-clipboard": "^3.3.3",
     "file-loader": "^6.2.0",
     "glslify-loader": "^2.0.0",
+    "mathcat": "^0.0.6",
     "md5": "^2.3.0",
     "moment": "^2.30.1",
+    "navcat": "^0.1.5",
     "next": "16.1.1",
     "open-in-editor": "^2.2.0",
     "raw-loader": "^4.0.2",

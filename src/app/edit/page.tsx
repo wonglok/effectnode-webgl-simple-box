@@ -1,28 +1,29 @@
-"use client";
+'use client'
 
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-import { EffectNode } from "../../../effectnode-developer-tools/effectnode-runtime/EffectNode";
-import { EffectNodeStudio } from "../../../effectnode-developer-tools/effectnode-gui/editor-gui/EffectnodeGUI/EffectNodeStudio.jsx";
-import { CameraControls } from "@react-three/drei";
+import { Canvas } from '@react-three/fiber'
+import { Suspense } from 'react'
+import { EffectNode } from '../../../effectnode-developer-tools/effectnode-runtime/EffectNode'
+import { EffectNodeStudio } from '../../../effectnode-developer-tools/effectnode-gui/editor-gui/EffectnodeGUI/EffectNodeStudio.jsx'
+import { CameraControls } from '@react-three/drei'
+import { CanvasGPU } from '@/components/CanvasGPU/CanvasGPU'
 
 export default function () {
   return (
     <>
-      <div className="w-full h-full overflow-hidden">
-        <EffectNodeStudio projectName="living-room">
-          <Canvas>
+      <div className='w-full h-full overflow-hidden'>
+        <EffectNodeStudio projectName='loklok-ocean'>
+          <CanvasGPU final={true}>
             <Suspense fallback={null}>
-              <EffectNode projectName="living-room"></EffectNode>
+              <EffectNode projectName='loklok-ocean'></EffectNode>
             </Suspense>
             <CameraControls></CameraControls>
-          </Canvas>
+          </CanvasGPU>
 
-          <div className=" absolute bottom-0 left-0 px-3 py-3">
-            <div className="bg-white rounded-lg p-1 px-3">
+          <div className=' absolute bottom-0 left-0 px-3 py-3'>
+            <div className='bg-white rounded-lg p-1 px-3'>
               <a
-                className="underline"
-                target="_blank"
+                className='underline'
+                target='_blank'
                 href={`https://www.fab.com/listings/a926d36d-6460-4c6e-8aaa-c22667cb075f`}
               >
                 3D Scene by Alister
@@ -32,5 +33,5 @@ export default function () {
         </EffectNodeStudio>
       </div>
     </>
-  );
+  )
 }

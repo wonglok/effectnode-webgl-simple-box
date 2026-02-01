@@ -3,15 +3,12 @@ import { myWins } from "effectnode-developer-tools/effectnode-gui/editor-gui/Eff
 import {
   Box,
   Center,
-  DragControls,
-  Environment,
   Grid,
-  Lightformer,
+  Html,
   MapControls,
   PerspectiveCamera,
   RoundedBox,
-  Sphere,
-  Text,
+  Text3D,
 } from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
 // import hdr from "public/hdr/studiolighting.hdr";
@@ -21,6 +18,9 @@ import { DisplayCreateEdge } from "./Edge/DisplayCreateEdge";
 import { DisplayAllEdges } from "./Edge/DisplayAllEdges";
 import { useDeveloper } from "effectnode-developer-tools/effectnode-gui/store/useDeveloper";
 import { GUI } from "./GUI";
+import { CanvasGPU } from "@/components/CanvasGPU/CanvasGPU";
+import { EnvLoader } from "@/components/CanvasGPU/EnvLoader";
+import { font } from "./Sockets/font.helvetica";
 
 //
 
@@ -159,6 +159,9 @@ function Content({ useStore }) {
               //
               onPointerUp={({ point }) => {
                 //
+
+                //
+
                 let time = performance.now();
                 let diff = time - graphCursorState.timer;
                 //
@@ -274,20 +277,35 @@ function Content({ useStore }) {
             <SocketInputs useStore={useStore} node={n}></SocketInputs>
             <SocketOutputs useStore={useStore} node={n}></SocketOutputs>
 
-            <Text
+
+            <Center top position={[0, 0.5, 0]}>
+              <Text3D
+                font={font}
+                position={[0, 0.0, 0]}
+                scale={[0.2, 0.2, 0.2]}
+                color={"black"}
+                rotation={[Math.PI * -0.5, 0, 0]}
+              >
+                {n.title}
+                <meshBasicMaterial color={'#060023'}></meshBasicMaterial>
+              </Text3D>
+            </Center>
+
+            {/* <Html
+              transform
               userData={{
                 type: "text",
               }}
-              position={[0, 0.2, 0.0]}
-              rotation={[Math.PI * -0.5, 0, 0]}
-              fontSize={0.125}
+              scale={0.5}
+              position={[0, 0, -0.5]}
+              rotation={[Math.PI * -0.25, 0, 0]}
               outlineWidth={0.005}
               outlineColor={"white"}
               color={"black"}
               textAlign="center"
             >
               {n.title}
-            </Text>
+            </Html> */}
           </group>
         );
       })}
@@ -332,35 +350,27 @@ export function EditorCanvas({ useStore }) {
       //
       >
         {/*  */}
-        <Canvas>
-          <PerspectiveCamera
-            makeDefault
-            position={[0, 3.5 * zoom, 1.0 * zoom]}
-            fov={50}
-          ></PerspectiveCamera>
+        <CanvasGPU webgl>
+          {/*  */}
 
-          <Grid
-            followCamera
-            infiniteGrid
-            sectionSize={10}
-            args={[1000, 1000]}
-            cellColor={'white'}
-          ></Grid>
+          <gridHelper
+            args={[1000, 1000, 0xffffff, 0xffffff]}
+          ></gridHelper>
 
           <InstallToStore useStore={useStore}></InstallToStore>
 
           <Content useStore={useStore}></Content>
 
-          {/* <ambientLight args={[0xffffff, 10]}></ambientLight> */}
-
-          <Environment background files={[hdr]}></Environment>
+          {/* <Environment background files={[hdr]}></Environment> */}
+          <EnvLoader background url={hdr}></EnvLoader>
 
           <MapControls
             makeDefault
+            object-fov={90}
             object-position={[0, 3.5 * zoom, 1.0 * zoom]}
             target={[0, 0, 0]}
           ></MapControls>
-        </Canvas>
+        </CanvasGPU>
       </div>
     </>
   );

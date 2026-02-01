@@ -1,27 +1,30 @@
 import { getID } from "effectnode-developer-tools/effectnode-gui/editor-gui/EffectnodeGUI/utils/getID";
-import { Box, RoundedBox, Text } from "@react-three/drei";
+import { RoundedBox, Html, Text3D, Center } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useRef } from "react";
+import { font } from './font.helvetica'
 
 export function SocketOne({ idx, type, socket, node, useStore }) {
   let graphCursorState = useStore((r) => r.graphCursorState);
   let controls = useThree((s) => s.controls);
   return (
     <>
-      <Text
-        position={[0, 0.8, 0]}
-        scale={[0.5, 0.5, 1]}
-        color={"black"}
-        rotation={[Math.PI * -0.5, 0, 0]}
-      >
-        {idx}
-      </Text>
+      <Center top position={[0, 0.5, 0]}>
+        <Text3D
+          font={font}
+          position={[0, 0.0, 0]}
+          scale={[0.5, 0.5, 0.5]}
+          rotation={[Math.PI * -0.5, 0, 0]}
+        >
+          {idx}
+          <meshBasicMaterial color={'#000000'}></meshBasicMaterial>
+        </Text3D>
+      </Center>
 
       <RoundedBox
         name={socket._id}
         radius={0.5}
         scale={[1, 0.5, 1]}
-        position={[0, 0.5, 0]}
+        position={[0, 0, 0]}
         onPointerDown={({ point }) => {
           //
           graphCursorState.nodeID = node._id;
