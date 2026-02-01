@@ -371,8 +371,6 @@ export class EditorCore {
       let { apps, wins } = this.getState();
 
       ///////
-
-      ///////
       {
         let win = wins.find((r) => r.type === "previewer");
 

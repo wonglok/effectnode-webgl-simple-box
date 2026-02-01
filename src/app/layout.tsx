@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  JetBrains_Mono,
+  Plus_Jakarta_Sans,
+  Space_Grotesk,
+} from "next/font/google";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const headings = Space_Grotesk({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = Plus_Jakarta_Sans({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+const code = JetBrains_Mono({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
 });
 
@@ -25,8 +33,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased ${headings.className} ${body.className} ${code.className}`}
       >
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+:root {
+  --font-sans: ${body.style.fontFamily}, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ${code.style.fontFamily}, ui-monospace, SFMono-Regular, monospace;
+  --font-serif: ${headings.style.fontFamily}, Cambria, "Times New Roman", serif;
+}
+.dark {
+  --font-sans: ${body.style.fontFamily}, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ${code.style.fontFamily}, ui-monospace, SFMono-Regular, monospace;
+  --font-serif: ${headings.style.fontFamily}, Cambria, "Times New Roman", serif;
+}
+          `,
+          }}
+        ></style>
         {children}
       </body>
     </html>
