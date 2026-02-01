@@ -5,6 +5,7 @@ import {
   Space_Grotesk,
 } from "next/font/google";
 
+// @ts-ignore
 import "./globals.css";
 
 const headings = Space_Grotesk({
