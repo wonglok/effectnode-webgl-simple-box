@@ -229,8 +229,6 @@ export function CodeRun({
           }, 300);
         }
 
-
-
         if (mode === "runtime" && !useEditorStore) {
           //
           // console.log("missing useEditorStore");

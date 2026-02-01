@@ -53,37 +53,37 @@ function loadImplementations({ projectName }) {
   return codes;
 }
 
-function loadAssets({ projectName }) {
-  let bucket = [];
+// function loadAssets({ projectName }) {
+//   let bucket = [];
 
-  let rr = require.context(
-    "@/effectnode/projects",
-    true,
-    /\/assets\/(.*).(png|jpg|hdr|jpeg|glb|gltf|fbx|exr|mp4|task|wasm|webm)$/,
-    "sync"
-  );
+//   let rr = require.context(
+//     "@/effectnode/projects",
+//     true,
+//     /\/assets\/(.*).(png|jpg|hdr|jpeg|glb|gltf|fbx|exr|mp4|task|wasm|webm)$/,
+//     "sync"
+//   );
 
-  let list = rr.keys();
+//   let list = rr.keys();
 
-  list.forEach((key) => {
-    if (key.startsWith("./") && key.includes(`/${projectName}/`)) {
-      let ext = extname(key);
+//   list.forEach((key) => {
+//     if (key.startsWith("./") && key.includes(`/${projectName}/`)) {
+//       let ext = extname(key);
 
-      let codeName = basename(key).replace(ext, "");
-      let item = {
-        _id: key,
-        projectName: projectName,
-        codeName: codeName,
-        fileName: basename(key),
-        assetURL: rr(key),
-      };
+//       let codeName = basename(key).replace(ext, "");
+//       let item = {
+//         _id: key,
+//         projectName: projectName,
+//         codeName: codeName,
+//         fileName: basename(key),
+//         assetURL: rr(key),
+//       };
 
-      bucket.push(item);
-    }
-  });
+//       bucket.push(item);
+//     }
+//   });
 
-  return bucket;
-}
+//   return bucket;
+// }
 
 export async function loadProjects({ projectName }) {
   let projectGraphs = [];
