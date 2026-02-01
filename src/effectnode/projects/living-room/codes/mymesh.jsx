@@ -39,7 +39,7 @@ export function NodeBox({ useNodeMemory }) {
 
   return (
     <>
-      <group position={[2.5, 0, 0]}>
+      <group position={[2, 0, 0]} scale={0.5}>
         <Center top>
           <MyMesh useNodeMemory={useNodeMemory}></MyMesh>
         </Center>
@@ -56,10 +56,11 @@ function MyMesh({ useNodeMemory }) {
       <EnergyWaveCompo></EnergyWaveCompo>
     </group>
     <RoundedBox args={[2, 2, 2]} bevelSegments={5} radius={0.25} position={[0, 0, 0]}>
-      <MeshTransmissionMaterial anisotropicBlur={0.12} anisotropy={0.5} chromaticAberration={0.15} transmission={1} roughness={0} thickness={1.75} color={baseColor} metalness={0} ></MeshTransmissionMaterial>
+      <MeshTransmissionMaterial anisotropicBlur={0.12} anisotropy={0.5} chromaticAberration={0.15} transmission={1} roughness={0} thickness={1.75} attenuationColor={baseColor} attenuationDistance={5} metalness={0} ></MeshTransmissionMaterial>
     </RoundedBox>
   </>
 }
 
 //
 //
+// 

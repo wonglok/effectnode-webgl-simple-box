@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 import { create } from "zustand";
 import { EditorApp } from "./EditorApp/EditorApp";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { getID } from "./utils/getID";
 import { myApps, myWins } from "./utils/myApps";
 import { useRouter } from "next/navigation";
